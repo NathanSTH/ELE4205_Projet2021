@@ -1,0 +1,9 @@
+add_executable(capture src/main.cpp src/capture.cpp src/boneCVtiming.cpp)
+
+find_package(OpenCV REQUIRED)
+if(OpenCV_FOUND)
+	include_directories({OpenCV_INCLUDE_DIRS})
+	target_link_libraries(capture ${OpenCV_LIBRARIES})
+else(OpenCV_FOUND)
+	message(FATAL ERROR "Librairie OpenCV introuvable!")
+endif(OpenCV_FOUND)
