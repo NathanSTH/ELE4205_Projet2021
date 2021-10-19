@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/capture.dir/src/main.o"
-  "CMakeFiles/capture.dir/src/capture.o"
-  "CMakeFiles/capture.dir/src/boneCVtiming.o"
+  "CMakeFiles/capture.dir/src/main.cpp.o"
+  "CMakeFiles/capture.dir/src/capture.cpp.o"
+  "CMakeFiles/capture.dir/src/boneCVtiming.cpp.o"
   "capture.pdb"
   "capture"
 )

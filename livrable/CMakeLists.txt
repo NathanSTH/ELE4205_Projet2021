@@ -1,3 +1,6 @@
+cmake_minimum_required(VERSION 3.4)
+add_definitions(-std=c++11)
+project(capture)
 add_executable(capture src/main.cpp src/capture.cpp src/boneCVtiming.cpp)
 
 find_package(OpenCV REQUIRED)

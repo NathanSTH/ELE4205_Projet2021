@@ -21,7 +21,7 @@
 <storageModule moduleId="org.eclipse.cdt.core.pathentry">
 <pathentry kind="src" path="[Source directory]"/>
 <pathentry excluding="[Source directory]/|**/CMakeFiles/" kind="out" path=""/>
-<pathentry include="/export/tmp/4205_37/Projet/Livrable/{OpenCV_INCLUDE_DIRS}" kind="inc" path="" system="true"/>
+<pathentry include="/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/{OpenCV_INCLUDE_DIRS}" kind="inc" path="" system="true"/>
 <pathentry include="/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/include/opencv" kind="inc" path="" system="true"/>
 <pathentry include="/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/include" kind="inc" path="" system="true"/>
 </storageModule>
@@ -57,14 +57,14 @@
 </target>
 <target name="Build" path="[Targets]/[exe] capture" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 <buildCommand>/bin/gmake</buildCommand>
-<buildArguments>-C "/export/tmp/4205_37/Projet/debug_oc2" -j8</buildArguments>
+<buildArguments>-C "/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2" -j8</buildArguments>
 <buildTarget>capture</buildTarget>
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
 <target name="Clean" path="[Targets]/[exe] capture" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 <buildCommand>/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake</buildCommand>
-<buildArguments>-E chdir "/export/tmp/4205_37/Projet/debug_oc2" "/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake" -P "CMakeFiles/capture.dir/cmake_clean.cmake"</buildArguments>
+<buildArguments>-E chdir "/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2" "/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake" -P "CMakeFiles/capture.dir/cmake_clean.cmake"</buildArguments>
 <buildTarget></buildTarget>
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
@@ -83,24 +83,24 @@
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
-<target name="[obj] src/boneCVtiming.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<target name="[obj] src/boneCVtiming.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 <buildCommand>/bin/gmake</buildCommand>
 <buildArguments>-j8</buildArguments>
-<buildTarget>src/boneCVtiming.o</buildTarget>
+<buildTarget>src/boneCVtiming.cpp.o</buildTarget>
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
-<target name="[obj] src/capture.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<target name="[obj] src/capture.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 <buildCommand>/bin/gmake</buildCommand>
 <buildArguments>-j8</buildArguments>
-<buildTarget>src/capture.o</buildTarget>
+<buildTarget>src/capture.cpp.o</buildTarget>
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
-<target name="[obj] src/main.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<target name="[obj] src/main.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 <buildCommand>/bin/gmake</buildCommand>
 <buildArguments>-j8</buildArguments>
-<buildTarget>src/main.o</buildTarget>
+<buildTarget>src/main.cpp.o</buildTarget>
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
@@ -132,6 +132,6 @@
 </cconfiguration>
 </storageModule>
 <storageModule moduleId="cdtBuildSystem" version="4.0.0">
-<project id="Project.null.1" name="Project"/>
+<project id="capture.null.1" name="capture"/>
 </storageModule>
 </cproject>

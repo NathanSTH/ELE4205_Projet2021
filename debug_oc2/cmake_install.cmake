@@ -1,4 +1,4 @@
-# Install script for directory: /export/tmp/4205_37/Projet/Livrable
+# Install script for directory: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/export/tmp/4205_37/Projet/debug_oc2/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

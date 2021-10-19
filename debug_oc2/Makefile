@@ -48,10 +48,10 @@ RM = /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /export/tmp/4205_37/Projet/Livrable
+CMAKE_SOURCE_DIR = /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /export/tmp/4205_37/Projet/debug_oc2
+CMAKE_BINARY_DIR = /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /export/tmp/4205_37/Projet/debug_oc2/CMakeFiles /export/tmp/4205_37/Projet/debug_oc2/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /export/tmp/4205_37/Projet/debug_oc2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,50 +123,86 @@ capture/fast:
 	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/build
 .PHONY : capture/fast
 
-# target to build an object file
-src/boneCVtiming.o:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/boneCVtiming.o
+src/boneCVtiming.o: src/boneCVtiming.cpp.o
+
 .PHONY : src/boneCVtiming.o
 
-# target to preprocess a source file
-src/boneCVtiming.i:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/boneCVtiming.i
+# target to build an object file
+src/boneCVtiming.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/boneCVtiming.cpp.o
+.PHONY : src/boneCVtiming.cpp.o
+
+src/boneCVtiming.i: src/boneCVtiming.cpp.i
+
 .PHONY : src/boneCVtiming.i
 
-# target to generate assembly for a file
-src/boneCVtiming.s:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/boneCVtiming.s
+# target to preprocess a source file
+src/boneCVtiming.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/boneCVtiming.cpp.i
+.PHONY : src/boneCVtiming.cpp.i
+
+src/boneCVtiming.s: src/boneCVtiming.cpp.s
+
 .PHONY : src/boneCVtiming.s
 
-# target to build an object file
-src/capture.o:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/capture.o
+# target to generate assembly for a file
+src/boneCVtiming.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/boneCVtiming.cpp.s
+.PHONY : src/boneCVtiming.cpp.s
+
+src/capture.o: src/capture.cpp.o
+
 .PHONY : src/capture.o
 
-# target to preprocess a source file
-src/capture.i:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/capture.i
+# target to build an object file
+src/capture.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/capture.cpp.o
+.PHONY : src/capture.cpp.o
+
+src/capture.i: src/capture.cpp.i
+
 .PHONY : src/capture.i
 
-# target to generate assembly for a file
-src/capture.s:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/capture.s
+# target to preprocess a source file
+src/capture.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/capture.cpp.i
+.PHONY : src/capture.cpp.i
+
+src/capture.s: src/capture.cpp.s
+
 .PHONY : src/capture.s
 
-# target to build an object file
-src/main.o:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/main.o
+# target to generate assembly for a file
+src/capture.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/capture.cpp.s
+.PHONY : src/capture.cpp.s
+
+src/main.o: src/main.cpp.o
+
 .PHONY : src/main.o
 
-# target to preprocess a source file
-src/main.i:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/main.i
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
 .PHONY : src/main.i
 
-# target to generate assembly for a file
-src/main.s:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/main.s
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
 .PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:

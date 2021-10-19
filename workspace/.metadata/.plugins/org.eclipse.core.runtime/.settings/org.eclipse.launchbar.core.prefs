@@ -1,8 +1,12 @@
+LaunchTargetManager/configs/capture=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-activeLaunchTarget=null\:---
-configDescList=
+configDescList=org.eclipse.cdt.debug.core.coreBuildDescriptorType\:capture-Debug@debug_oc2,org.eclipse.launchbar.core.descriptorType.default\:capture,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:capture-Debug_debug_oc2 Configuration
 eclipse.preferences.version=1
-org.eclipse.cdt.debug.core.coreBuildDescriptorType\:Project-Debug@debug_oc2/activeLaunchMode=run
-org.eclipse.cdt.debug.core.coreBuildDescriptorType\:Project-Debug@debug_oc2/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.cdt.debug.core.coreBuildDescriptorType\:capture-Debug@debug_oc2/activeLaunchMode=run
+org.eclipse.cdt.debug.core.coreBuildDescriptorType\:capture-Debug@debug_oc2/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:capture-Debug_debug_oc2\ Configuration/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:capture-Debug_debug_oc2\ Configuration/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:capture/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:capture/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
