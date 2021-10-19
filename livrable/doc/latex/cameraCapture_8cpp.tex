@@ -1,0 +1,66 @@
+\hypertarget{cameraCapture_8cpp}{\section{src/camera\-Capture.cpp File Reference}
+\label{cameraCapture_8cpp}\index{src/camera\-Capture.\-cpp@{src/camera\-Capture.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}../include/camera\-Capture.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \hyperlink{cameraCapture_8cpp_a5fa91fc77c21d431a4bfc3cbbbf3f830}{get\-\_\-timing} ()
+\begin{DoxyCompactList}\small\item\em This function computes all framerates values corresponding to the resolution options contained in res\-X\-\_\-all and res\-Y\-\_\-all. \end{DoxyCompactList}\item 
+int \hyperlink{cameraCapture_8cpp_a20ace2e1f1d9f035fd9bef8efa40f89d}{write\-Video} (struct \hyperlink{structcamera}{camera} \hyperlink{structcamera}{camera}, int \hyperlink{main_8cpp_a770a7c9941b7207be8d7227bf5178c51}{duration})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\-\_\-t \hyperlink{cameraCapture_8cpp_a47848490add81bbb7b795efd520d387c}{res\-X\-\_\-all} \mbox{[}\hyperlink{cameraCapture_8h_a79a33e4821543c8a59f8048b043a319b}{nb\-Res}\mbox{]} = \{176,160,320,320,352,432,800,864,960,960,1184,1280,1280\}
+\begin{DoxyCompactList}\small\item\em Array that contains all possible width resolution values for Logitech C270 camera. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{cameraCapture_8cpp_a809ecb289ab122758326ac2b72cf4bdb}{res\-Y\-\_\-all} \mbox{[}\hyperlink{cameraCapture_8h_a79a33e4821543c8a59f8048b043a319b}{nb\-Res}\mbox{]} = \{144,120,176,240,288,240,600,480,544,720,656,720,960\}
+\begin{DoxyCompactList}\small\item\em Array that contains all possible heigth resolution values for Logitech C270 camera. \end{DoxyCompactList}\item 
+double \hyperlink{cameraCapture_8cpp_a4b3b7d2e208d77136b3535b21a232e2c}{fps\-\_\-all} \mbox{[}\hyperlink{cameraCapture_8h_a79a33e4821543c8a59f8048b043a319b}{nb\-Res}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array that contains all possible framerate values calculated with get\-\_\-timing function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{cameraCapture_8cpp_a5fa91fc77c21d431a4bfc3cbbbf3f830}{\index{camera\-Capture.\-cpp@{camera\-Capture.\-cpp}!get\-\_\-timing@{get\-\_\-timing}}
+\index{get\-\_\-timing@{get\-\_\-timing}!cameraCapture.cpp@{camera\-Capture.\-cpp}}
+\subsubsection[{get\-\_\-timing}]{\setlength{\rightskip}{0pt plus 5cm}get\-\_\-timing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{cameraCapture_8cpp_a5fa91fc77c21d431a4bfc3cbbbf3f830}
+
+
+This function computes all framerates values corresponding to the resolution options contained in res\-X\-\_\-all and res\-Y\-\_\-all. 
+
+\hypertarget{cameraCapture_8cpp_a20ace2e1f1d9f035fd9bef8efa40f89d}{\index{camera\-Capture.\-cpp@{camera\-Capture.\-cpp}!write\-Video@{write\-Video}}
+\index{write\-Video@{write\-Video}!cameraCapture.cpp@{camera\-Capture.\-cpp}}
+\subsubsection[{write\-Video}]{\setlength{\rightskip}{0pt plus 5cm}int write\-Video (
+\begin{DoxyParamCaption}
+\item[{struct {\bf camera} {\bf camera}}]{, }
+\item[{int}]{duration}
+\end{DoxyParamCaption}
+)}}\label{cameraCapture_8cpp_a20ace2e1f1d9f035fd9bef8efa40f89d}
+
+
+\subsection{Variable Documentation}
+\hypertarget{cameraCapture_8cpp_a4b3b7d2e208d77136b3535b21a232e2c}{\index{camera\-Capture.\-cpp@{camera\-Capture.\-cpp}!fps\-\_\-all@{fps\-\_\-all}}
+\index{fps\-\_\-all@{fps\-\_\-all}!cameraCapture.cpp@{camera\-Capture.\-cpp}}
+\subsubsection[{fps\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}fps\-\_\-all}}\label{cameraCapture_8cpp_a4b3b7d2e208d77136b3535b21a232e2c}
+
+
+Array that contains all possible framerate values calculated with get\-\_\-timing function. 
+
+\hypertarget{cameraCapture_8cpp_a47848490add81bbb7b795efd520d387c}{\index{camera\-Capture.\-cpp@{camera\-Capture.\-cpp}!res\-X\-\_\-all@{res\-X\-\_\-all}}
+\index{res\-X\-\_\-all@{res\-X\-\_\-all}!cameraCapture.cpp@{camera\-Capture.\-cpp}}
+\subsubsection[{res\-X\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}res\-X\-\_\-all = \{176,160,320,320,352,432,800,864,960,960,1184,1280,1280\}}}\label{cameraCapture_8cpp_a47848490add81bbb7b795efd520d387c}
+
+
+Array that contains all possible width resolution values for Logitech C270 camera. 
+
+\hypertarget{cameraCapture_8cpp_a809ecb289ab122758326ac2b72cf4bdb}{\index{camera\-Capture.\-cpp@{camera\-Capture.\-cpp}!res\-Y\-\_\-all@{res\-Y\-\_\-all}}
+\index{res\-Y\-\_\-all@{res\-Y\-\_\-all}!cameraCapture.cpp@{camera\-Capture.\-cpp}}
+\subsubsection[{res\-Y\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}res\-Y\-\_\-all = \{144,120,176,240,288,240,600,480,544,720,656,720,960\}}}\label{cameraCapture_8cpp_a809ecb289ab122758326ac2b72cf4bdb}
+
+
+Array that contains all possible heigth resolution values for Logitech C270 camera. 
+
