@@ -16,12 +16,21 @@
 
 CMAKE:STRING='ASM_FLAGS; -O2 -pipe -g -feliminate-unused-debug-types '
 
+//Path to a program.
+CMAKE_AR:FILEPATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-ar
+
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
 CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
+
+//CXX compiler
+CMAKE_CXX_COMPILER:FILEPATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++
+
+//First argument to CXX compiler
+CMAKE_CXX_COMPILER_ARG1:STRING=  --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux
 
 CMAKE_CXX_FLAGS:STRING=' -O2 -pipe -g -feliminate-unused-debug-types '
 
@@ -38,6 +47,12 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the compiler during release builds with debug info.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
+//C compiler
+CMAKE_C_COMPILER:FILEPATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc
+
+//First argument to C compiler
+CMAKE_C_COMPILER_ARG1:STRING=  --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux
+
 CMAKE_C_FLAGS:STRING=' -O2 -pipe -g -feliminate-unused-debug-types '
 
 //Flags used by the compiler during debug builds.
@@ -52,25 +67,6 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
 //Flags used by the compiler during release builds with debug info.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
-
-//The Eclipse executable
-CMAKE_ECLIPSE_EXECUTABLE:FILEPATH=/usr/local/bin/eclipse
-
-//If disabled, CMake will not generate linked resource to the subprojects
-// and to the source files within targets
-CMAKE_ECLIPSE_GENERATE_LINKED_RESOURCES:BOOL=TRUE
-
-//If enabled, CMake will generate a source project for Eclipse
-// in CMAKE_SOURCE_DIR
-CMAKE_ECLIPSE_GENERATE_SOURCE_PROJECT:BOOL=TRUE
-
-//Additional command line arguments when Eclipse invokes make.
-// Enter e.g. -j<some_number> to get parallel builds
-CMAKE_ECLIPSE_MAKE_ARGUMENTS:STRING=-j8
-
-//The version of Eclipse. If Eclipse has not been found, 3.6 (Helios)
-// is assumed.
-CMAKE_ECLIPSE_VERSION:STRING=4.20 ()
 
 //Flags used by the linker.
 CMAKE_EXE_LINKER_FLAGS:STRING= -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed
@@ -96,6 +92,9 @@ CMAKE_INSTALL_PREFIX:PATH=/usr/local
 CMAKE_LDFLAGS_FLAGS:STRING=' -O2 -pipe -g -feliminate-unused-debug-types '
 
 //Path to a program.
+CMAKE_LINKER:FILEPATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-ld
+
+//Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/bin/gmake
 
 //Flags used by the linker during the creation of modules.
@@ -113,8 +112,20 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during Release with Debug Info builds.
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
+//Path to a program.
+CMAKE_NM:FILEPATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-nm
+
+//Path to a program.
+CMAKE_OBJCOPY:FILEPATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-objcopy
+
+//Path to a program.
+CMAKE_OBJDUMP:FILEPATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-objdump
+
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=capture
+
+//Path to a program.
+CMAKE_RANLIB:FILEPATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-ranlib
 
 //Flags used by the linker during the creation of dll's.
 CMAKE_SHARED_LINKER_FLAGS:STRING= -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed
@@ -153,6 +164,9 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during Release with Debug Info builds.
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
+//Path to a program.
+CMAKE_STRIP:FILEPATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-strip
+
 //No help, variable specified on the command line.
 CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/share/cmake/OEToolchainConfig.cmake
 
@@ -179,23 +193,19 @@ OpenCV_LIB_DIR_DBG:PATH=
 //Path where release OpenCV libraries are located
 OpenCV_LIB_DIR_OPT:PATH=
 
-//Path to a program.
-ProcessorCount_cmd_getconf:FILEPATH=/bin/getconf
-
-//Path to a program.
-ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
-
 //Value Computed by CMake
 capture_BINARY_DIR:STATIC=/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2
 
 //Value Computed by CMake
-capture_SOURCE_DIR:STATIC=/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable
+capture_SOURCE_DIR:STATIC=/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2
 
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: CMAKE_AR
+CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2
 //Major version of cmake used to create the current loaded cache
@@ -212,6 +222,8 @@ CMAKE_COMMAND:INTERNAL=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linu
 CMAKE_CPACK_COMMAND:INTERNAL=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cpack
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/ctest
+//ADVANCED property for variable: CMAKE_CXX_COMPILER
+CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
 CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
@@ -222,6 +234,8 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER
+CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -232,10 +246,8 @@ CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ECLIPSE_GENERATE_SOURCE_PROJECT
-CMAKE_ECLIPSE_GENERATE_SOURCE_PROJECT-ADVANCED:INTERNAL=1
-//STRINGS property for variable: CMAKE_ECLIPSE_VERSION
-CMAKE_ECLIPSE_VERSION-STRINGS:INTERNAL=3.2 (Callisto);3.3 (Europa);3.4 (Ganymede);3.5 (Galileo);3.6 (Helios);3.7 (Indigo);4.2 (Juno);4.3 (Kepler)
+//Executable file format
+CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
 CMAKE_EXE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBUG
@@ -249,15 +261,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
 CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
-CMAKE_EXTRA_GENERATOR:INTERNAL=Eclipse CDT4
-//CXX compiler system defined macros
-CMAKE_EXTRA_GENERATOR_CXX_SYSTEM_DEFINED_MACROS:INTERNAL=
-//CXX compiler system include directories
-CMAKE_EXTRA_GENERATOR_CXX_SYSTEM_INCLUDE_DIRS:INTERNAL=
-//C compiler system defined macros
-CMAKE_EXTRA_GENERATOR_C_SYSTEM_DEFINED_MACROS:INTERNAL=
-//C compiler system include directories
-CMAKE_EXTRA_GENERATOR_C_SYSTEM_INCLUDE_DIRS:INTERNAL=
+CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
 //Name of generator platform.
@@ -266,9 +270,11 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable
+CMAKE_HOME_DIRECTORY:INTERNAL=/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=0
+//ADVANCED property for variable: CMAKE_LINKER
+CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
 CMAKE_MAKE_PROGRAM-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS
@@ -281,8 +287,16 @@ CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_NM
+CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
 CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+//ADVANCED property for variable: CMAKE_OBJCOPY
+CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_OBJDUMP
+CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_RANLIB
+CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.4
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
@@ -309,6 +323,10 @@ CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_STRIP
+CMAKE_STRIP-ADVANCED:INTERNAL=1
+//uname command
+CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_DBG
@@ -321,8 +339,4 @@ OpenCV_CONFIG_PATH-ADVANCED:INTERNAL=1
 OpenCV_LIB_DIR_DBG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_LIB_DIR_OPT
 OpenCV_LIB_DIR_OPT-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: ProcessorCount_cmd_getconf
-ProcessorCount_cmd_getconf-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: ProcessorCount_cmd_sysctl
-ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
 

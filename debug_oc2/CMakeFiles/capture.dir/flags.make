@@ -6,5 +6,5 @@ CXX_FLAGS =  -O2 -pipe -g -feliminate-unused-debug-types  -O3 -DNDEBUG   -std=c+
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/{OpenCV_INCLUDE_DIRS} -isystem /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/include/opencv -isystem /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/include 
+CXX_INCLUDES = -I/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/{OpenCV_INCLUDE_DIRS} -isystem /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/include/opencv -isystem /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/include 
 

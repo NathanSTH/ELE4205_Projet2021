@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/include/cameraCapture.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h
 opencv2/opencv.hpp
 -
 iostream
@@ -14,7 +14,31 @@ iostream
 time.h
 -
 
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/include/common.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/common.h
+stdio.h
+-
+stdlib.h
+-
+fstream
+-
+netdb.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+unistd.h
+-
+opencv2/opencv.hpp
+-
+iostream
+-
+ostream
+-
+cameraCapture.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h
+
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/handleTCP.h
 stdio.h
 -
 stdlib.h
@@ -32,19 +56,25 @@ unistd.h
 opencv2/opencv.hpp
 -
 cameraCapture.h
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/include/cameraCapture.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h
+common.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/common.h
 
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/src/cameraCapture.cpp
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp
 ../include/cameraCapture.h
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/include/cameraCapture.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h
 
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/src/common.cpp
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp
 ../include/common.h
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/include/common.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/common.h
 opencv2/opencv.hpp
 -
 
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/src/main.cpp
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp
+../include/handleTCP.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/handleTCP.h
+
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp
 stdio.h
 -
 stdlib.h
@@ -64,9 +94,11 @@ opencv2/opencv.hpp
 iostream
 -
 ../include/cameraCapture.h
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/include/cameraCapture.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h
 ../include/common.h
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/include/common.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/common.h
+../include/handleTCP.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/handleTCP.h
 netdb.h
 -
 unistd.h

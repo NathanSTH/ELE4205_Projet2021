@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.4)
+add_definitions(-std=c++11)
+project(capture)
+add_executable(capture ../src/main.cpp ../src/cameraCapture.cpp ../src/common.cpp ../src/handleTCP.cpp)
+
+find_package(OpenCV REQUIRED)
+if(OpenCV_FOUND)
+	include_directories({OpenCV_INCLUDE_DIRS})
+	target_link_libraries(capture ${OpenCV_LIBRARIES})
+else(OpenCV_FOUND)
+	message(FATAL ERROR "Librairie OpenCV introuvable!")
+endif(OpenCV_FOUND)

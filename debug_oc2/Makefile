@@ -48,7 +48,7 @@ RM = /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable
+CMAKE_SOURCE_DIR = /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2
@@ -123,86 +123,113 @@ capture/fast:
 	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/build
 .PHONY : capture/fast
 
-src/cameraCapture.o: src/cameraCapture.cpp.o
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.o: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.o
 
-.PHONY : src/cameraCapture.o
-
-# target to build an object file
-src/cameraCapture.cpp.o:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/cameraCapture.cpp.o
-.PHONY : src/cameraCapture.cpp.o
-
-src/cameraCapture.i: src/cameraCapture.cpp.i
-
-.PHONY : src/cameraCapture.i
-
-# target to preprocess a source file
-src/cameraCapture.cpp.i:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/cameraCapture.cpp.i
-.PHONY : src/cameraCapture.cpp.i
-
-src/cameraCapture.s: src/cameraCapture.cpp.s
-
-.PHONY : src/cameraCapture.s
-
-# target to generate assembly for a file
-src/cameraCapture.cpp.s:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/cameraCapture.cpp.s
-.PHONY : src/cameraCapture.cpp.s
-
-src/common.o: src/common.cpp.o
-
-.PHONY : src/common.o
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.o
 
 # target to build an object file
-src/common.cpp.o:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/common.cpp.o
-.PHONY : src/common.cpp.o
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.o
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.o
 
-src/common.i: src/common.cpp.i
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.i: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.i
 
-.PHONY : src/common.i
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.i
 
 # target to preprocess a source file
-src/common.cpp.i:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/common.cpp.i
-.PHONY : src/common.cpp.i
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.i
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.i
 
-src/common.s: src/common.cpp.s
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.s: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.s
 
-.PHONY : src/common.s
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.s
 
 # target to generate assembly for a file
-src/common.cpp.s:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/common.cpp.s
-.PHONY : src/common.cpp.s
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.s
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.cpp.s
 
-src/main.o: src/main.cpp.o
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.o: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.o
 
-.PHONY : src/main.o
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.o
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.o
 
-src/main.i: src/main.cpp.i
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.i: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.i
 
-.PHONY : src/main.i
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.i
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.i
 
-src/main.s: src/main.cpp.s
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.s: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.s
 
-.PHONY : src/main.s
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.s
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.s
+
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.o: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.o
+
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.o
+
+# target to build an object file
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.o
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.o
+
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.i: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.i
+
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.i
+
+# target to preprocess a source file
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.i
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.i
+
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.s: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.s
+
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.s
+
+# target to generate assembly for a file
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.s
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.cpp.s
+
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.o: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.o
+
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.o
+
+# target to build an object file
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.o
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.o
+
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.i: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.i
+
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.i
+
+# target to preprocess a source file
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.i
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.i
+
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.s: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.s
+
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.s
+
+# target to generate assembly for a file
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.s
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.cpp.s
 
 # Help Target
 help:
@@ -213,15 +240,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... capture"
-	@echo "... src/cameraCapture.o"
-	@echo "... src/cameraCapture.i"
-	@echo "... src/cameraCapture.s"
-	@echo "... src/common.o"
-	@echo "... src/common.i"
-	@echo "... src/common.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.o"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.i"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cameraCapture.s"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.o"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.i"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.s"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.o"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.i"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleTCP.s"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.o"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.i"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/main.s"
 .PHONY : help
 
 

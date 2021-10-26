@@ -1,4 +1,4 @@
-# Install script for directory: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable
+# Install script for directory: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -29,28 +29,28 @@ The CXX compiler identification is GNU, found in "/export/tmp/4205_37/Projet/ele
 Determining if the C compiler works passed with the following output:
 Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_d126f/fast"
-/bin/gmake -f CMakeFiles/cmTC_d126f.dir/build.make CMakeFiles/cmTC_d126f.dir/build
+Run Build Command:"/bin/gmake" "cmTC_b3344/fast"
+/bin/gmake -f CMakeFiles/cmTC_b3344.dir/build.make CMakeFiles/cmTC_b3344.dir/build
 gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d126f.dir/testCCompiler.c.o
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_d126f.dir/testCCompiler.c.o   -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_d126f
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d126f.dir/link.txt --verbose=1
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_d126f.dir/testCCompiler.c.o  -o cmTC_d126f 
+Building C object CMakeFiles/cmTC_b3344.dir/testCCompiler.c.o
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_b3344.dir/testCCompiler.c.o   -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b3344
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3344.dir/link.txt --verbose=1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_b3344.dir/testCCompiler.c.o  -o cmTC_b3344 
 gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_c5b1f/fast"
-/bin/gmake -f CMakeFiles/cmTC_c5b1f.dir/build.make CMakeFiles/cmTC_c5b1f.dir/build
+Run Build Command:"/bin/gmake" "cmTC_897b7/fast"
+/bin/gmake -f CMakeFiles/cmTC_897b7.dir/build.make CMakeFiles/cmTC_897b7.dir/build
 gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c5b1f.dir/CMakeCCompilerABI.c.o
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_c5b1f.dir/CMakeCCompilerABI.c.o   -c /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.4/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_c5b1f
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5b1f.dir/link.txt --verbose=1
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_c5b1f.dir/CMakeCCompilerABI.c.o  -o cmTC_c5b1f  
+Building C object CMakeFiles/cmTC_897b7.dir/CMakeCCompilerABI.c.o
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_897b7.dir/CMakeCCompilerABI.c.o   -c /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.4/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_897b7
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_897b7.dir/link.txt --verbose=1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_897b7.dir/CMakeCCompilerABI.c.o  -o cmTC_897b7  
 Using built-in specs.
 COLLECT_GCC=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc
 COLLECT_LTO_WRAPPER=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper
@@ -60,8 +60,8 @@ Thread model: posix
 gcc version 5.3.0 (GCC) 
 COMPILER_PATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/
 LIBRARY_PATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/
-COLLECT_GCC_OPTIONS='--sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_c5b1f' '-mlittle-endian' '-mabi=lp64'
- /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/collect2 -plugin /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/liblto_plugin.so -plugin-opt=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cchkXdUh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -o cmTC_c5b1f /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crt1.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crti.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtbegin.o -L/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_c5b1f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtend.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='--sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_897b7' '-mlittle-endian' '-mabi=lp64'
+ /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/collect2 -plugin /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/liblto_plugin.so -plugin-opt=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cch5mvpV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -o cmTC_897b7 /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crt1.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crti.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtbegin.o -L/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_897b7.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtend.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crtn.o
 gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
 
 
@@ -69,14 +69,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(aarch64-poky-linux-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/bin/gmake" "cmTC_c5b1f/fast"]
-  ignore line: [/bin/gmake -f CMakeFiles/cmTC_c5b1f.dir/build.make CMakeFiles/cmTC_c5b1f.dir/build]
+  ignore line: [Run Build Command:"/bin/gmake" "cmTC_897b7/fast"]
+  ignore line: [/bin/gmake -f CMakeFiles/cmTC_897b7.dir/build.make CMakeFiles/cmTC_897b7.dir/build]
   ignore line: [gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_c5b1f.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_c5b1f.dir/CMakeCCompilerABI.c.o   -c /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.4/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_c5b1f]
-  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5b1f.dir/link.txt --verbose=1]
-  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_c5b1f.dir/CMakeCCompilerABI.c.o  -o cmTC_c5b1f  ]
+  ignore line: [Building C object CMakeFiles/cmTC_897b7.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_897b7.dir/CMakeCCompilerABI.c.o   -c /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.4/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_897b7]
+  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_897b7.dir/link.txt --verbose=1]
+  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_897b7.dir/CMakeCCompilerABI.c.o  -o cmTC_897b7  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper]
@@ -86,13 +86,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.3.0 (GCC) ]
   ignore line: [COMPILER_PATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/]
   ignore line: [LIBRARY_PATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_c5b1f' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/collect2 -plugin /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/liblto_plugin.so -plugin-opt=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cchkXdUh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -o cmTC_c5b1f /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crt1.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crti.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtbegin.o -L/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_c5b1f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtend.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_897b7' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/collect2 -plugin /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/liblto_plugin.so -plugin-opt=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cch5mvpV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -o cmTC_897b7 /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crt1.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crti.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtbegin.o -L/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_897b7.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtend.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crtn.o]
     arg [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cchkXdUh.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cch5mvpV.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -108,7 +108,7 @@ Parsed C implicit link information from above output:
     arg [-EL] ==> ignore
     arg [-maarch64linux] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c5b1f] ==> ignore
+    arg [cmTC_897b7] ==> ignore
     arg [/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crt1.o] ==> ignore
     arg [/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crti.o] ==> ignore
     arg [/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtbegin.o] ==> ignore
@@ -119,7 +119,7 @@ Parsed C implicit link information from above output:
     arg [-O1] ==> ignore
     arg [--hash-style=gnu] ==> ignore
     arg [--as-needed] ==> ignore
-    arg [CMakeFiles/cmTC_c5b1f.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_897b7.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -149,14 +149,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_2db92/fast"
-/bin/gmake -f CMakeFiles/cmTC_2db92.dir/build.make CMakeFiles/cmTC_2db92.dir/build
+Run Build Command:"/bin/gmake" "cmTC_e2bfa/fast"
+/bin/gmake -f CMakeFiles/cmTC_e2bfa.dir/build.make CMakeFiles/cmTC_e2bfa.dir/build
 gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2db92.dir/feature_tests.c.o
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c11 -o CMakeFiles/cmTC_2db92.dir/feature_tests.c.o   -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.c
-Linking C executable cmTC_2db92
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2db92.dir/link.txt --verbose=1
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_2db92.dir/feature_tests.c.o  -o cmTC_2db92 
+Building C object CMakeFiles/cmTC_e2bfa.dir/feature_tests.c.o
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c11 -o CMakeFiles/cmTC_e2bfa.dir/feature_tests.c.o   -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e2bfa
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2bfa.dir/link.txt --verbose=1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_e2bfa.dir/feature_tests.c.o  -o cmTC_e2bfa 
 gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
 
 
@@ -169,14 +169,14 @@ gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_3
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_0c612/fast"
-/bin/gmake -f CMakeFiles/cmTC_0c612.dir/build.make CMakeFiles/cmTC_0c612.dir/build
+Run Build Command:"/bin/gmake" "cmTC_a50df/fast"
+/bin/gmake -f CMakeFiles/cmTC_a50df.dir/build.make CMakeFiles/cmTC_a50df.dir/build
 gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0c612.dir/feature_tests.c.o
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c99 -o CMakeFiles/cmTC_0c612.dir/feature_tests.c.o   -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.c
-Linking C executable cmTC_0c612
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c612.dir/link.txt --verbose=1
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_0c612.dir/feature_tests.c.o  -o cmTC_0c612 
+Building C object CMakeFiles/cmTC_a50df.dir/feature_tests.c.o
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c99 -o CMakeFiles/cmTC_a50df.dir/feature_tests.c.o   -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a50df
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a50df.dir/link.txt --verbose=1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_a50df.dir/feature_tests.c.o  -o cmTC_a50df 
 gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
 
 
@@ -189,14 +189,14 @@ gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_3
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_03bdc/fast"
-/bin/gmake -f CMakeFiles/cmTC_03bdc.dir/build.make CMakeFiles/cmTC_03bdc.dir/build
+Run Build Command:"/bin/gmake" "cmTC_2fdb1/fast"
+/bin/gmake -f CMakeFiles/cmTC_2fdb1.dir/build.make CMakeFiles/cmTC_2fdb1.dir/build
 gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_03bdc.dir/feature_tests.c.o
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c90 -o CMakeFiles/cmTC_03bdc.dir/feature_tests.c.o   -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.c
-Linking C executable cmTC_03bdc
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03bdc.dir/link.txt --verbose=1
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_03bdc.dir/feature_tests.c.o  -o cmTC_03bdc 
+Building C object CMakeFiles/cmTC_2fdb1.dir/feature_tests.c.o
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c90 -o CMakeFiles/cmTC_2fdb1.dir/feature_tests.c.o   -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.c
+Linking C executable cmTC_2fdb1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fdb1.dir/link.txt --verbose=1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_2fdb1.dir/feature_tests.c.o  -o cmTC_2fdb1 
 gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
 
 
@@ -207,28 +207,28 @@ gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_3
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_d8fb8/fast"
-/bin/gmake -f CMakeFiles/cmTC_d8fb8.dir/build.make CMakeFiles/cmTC_d8fb8.dir/build
+Run Build Command:"/bin/gmake" "cmTC_0a7d2/fast"
+/bin/gmake -f CMakeFiles/cmTC_0a7d2.dir/build.make CMakeFiles/cmTC_0a7d2.dir/build
 gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d8fb8.dir/testCXXCompiler.cxx.o
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_d8fb8.dir/testCXXCompiler.cxx.o -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_d8fb8
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8fb8.dir/link.txt --verbose=1
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_d8fb8.dir/testCXXCompiler.cxx.o  -o cmTC_d8fb8 
+Building CXX object CMakeFiles/cmTC_0a7d2.dir/testCXXCompiler.cxx.o
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_0a7d2.dir/testCXXCompiler.cxx.o -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_0a7d2
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a7d2.dir/link.txt --verbose=1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_0a7d2.dir/testCXXCompiler.cxx.o  -o cmTC_0a7d2 
 gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_fa001/fast"
-/bin/gmake -f CMakeFiles/cmTC_fa001.dir/build.make CMakeFiles/cmTC_fa001.dir/build
+Run Build Command:"/bin/gmake" "cmTC_167a0/fast"
+/bin/gmake -f CMakeFiles/cmTC_167a0.dir/build.make CMakeFiles/cmTC_167a0.dir/build
 gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fa001.dir/CMakeCXXCompilerABI.cpp.o
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_fa001.dir/CMakeCXXCompilerABI.cpp.o -c /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.4/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_fa001
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa001.dir/link.txt --verbose=1
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_fa001.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fa001  
+Building CXX object CMakeFiles/cmTC_167a0.dir/CMakeCXXCompilerABI.cpp.o
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_167a0.dir/CMakeCXXCompilerABI.cpp.o -c /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.4/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_167a0
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_167a0.dir/link.txt --verbose=1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_167a0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_167a0  
 Using built-in specs.
 COLLECT_GCC=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++
 COLLECT_LTO_WRAPPER=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper
@@ -238,8 +238,8 @@ Thread model: posix
 gcc version 5.3.0 (GCC) 
 COMPILER_PATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/
 LIBRARY_PATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/
-COLLECT_GCC_OPTIONS='--sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_fa001' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/collect2 -plugin /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/liblto_plugin.so -plugin-opt=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsKZfCr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -o cmTC_fa001 /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crt1.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crti.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtbegin.o -L/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_fa001.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtend.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='--sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_167a0' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/collect2 -plugin /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/liblto_plugin.so -plugin-opt=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNDSNy6.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -o cmTC_167a0 /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crt1.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crti.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtbegin.o -L/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_167a0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtend.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crtn.o
 gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
 
 
@@ -247,14 +247,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(aarch64-poky-linux-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/bin/gmake" "cmTC_fa001/fast"]
-  ignore line: [/bin/gmake -f CMakeFiles/cmTC_fa001.dir/build.make CMakeFiles/cmTC_fa001.dir/build]
+  ignore line: [Run Build Command:"/bin/gmake" "cmTC_167a0/fast"]
+  ignore line: [/bin/gmake -f CMakeFiles/cmTC_167a0.dir/build.make CMakeFiles/cmTC_167a0.dir/build]
   ignore line: [gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_fa001.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_fa001.dir/CMakeCXXCompilerABI.cpp.o -c /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.4/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_fa001]
-  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa001.dir/link.txt --verbose=1]
-  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_fa001.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fa001  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_167a0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_167a0.dir/CMakeCXXCompilerABI.cpp.o -c /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.4/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_167a0]
+  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_167a0.dir/link.txt --verbose=1]
+  ignore line: [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_167a0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_167a0  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++]
   ignore line: [COLLECT_LTO_WRAPPER=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper]
@@ -264,13 +264,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.3.0 (GCC) ]
   ignore line: [COMPILER_PATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/]
   ignore line: [LIBRARY_PATH=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/:/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_fa001' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/collect2 -plugin /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/liblto_plugin.so -plugin-opt=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsKZfCr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -o cmTC_fa001 /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crt1.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crti.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtbegin.o -L/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_fa001.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtend.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_167a0' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/collect2 -plugin /export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/liblto_plugin.so -plugin-opt=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNDSNy6.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -o cmTC_167a0 /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crt1.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crti.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtbegin.o -L/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/lib -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0 -L/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_167a0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtend.o /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crtn.o]
     arg [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/libexec/aarch64-poky-linux/gcc/aarch64-poky-linux/5.3.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccsKZfCr.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccNDSNy6.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -286,7 +286,7 @@ Parsed CXX implicit link information from above output:
     arg [-EL] ==> ignore
     arg [-maarch64linux] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_fa001] ==> ignore
+    arg [cmTC_167a0] ==> ignore
     arg [/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crt1.o] ==> ignore
     arg [/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/crti.o] ==> ignore
     arg [/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/lib/aarch64-poky-linux/5.3.0/crtbegin.o] ==> ignore
@@ -297,7 +297,7 @@ Parsed CXX implicit link information from above output:
     arg [-O1] ==> ignore
     arg [--hash-style=gnu] ==> ignore
     arg [--as-needed] ==> ignore
-    arg [CMakeFiles/cmTC_fa001.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_167a0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -325,14 +325,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_3478a/fast"
-/bin/gmake -f CMakeFiles/cmTC_3478a.dir/build.make CMakeFiles/cmTC_3478a.dir/build
+Run Build Command:"/bin/gmake" "cmTC_fe1de/fast"
+/bin/gmake -f CMakeFiles/cmTC_fe1de.dir/build.make CMakeFiles/cmTC_fe1de.dir/build
 gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3478a.dir/feature_tests.cxx.o
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++14 -o CMakeFiles/cmTC_3478a.dir/feature_tests.cxx.o -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_3478a
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3478a.dir/link.txt --verbose=1
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_3478a.dir/feature_tests.cxx.o  -o cmTC_3478a 
+Building CXX object CMakeFiles/cmTC_fe1de.dir/feature_tests.cxx.o
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++14 -o CMakeFiles/cmTC_fe1de.dir/feature_tests.cxx.o -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_fe1de
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe1de.dir/link.txt --verbose=1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_fe1de.dir/feature_tests.cxx.o  -o cmTC_fe1de 
 gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
 
 
@@ -398,14 +398,14 @@ gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_3
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_4d0ac/fast"
-/bin/gmake -f CMakeFiles/cmTC_4d0ac.dir/build.make CMakeFiles/cmTC_4d0ac.dir/build
+Run Build Command:"/bin/gmake" "cmTC_4f0bf/fast"
+/bin/gmake -f CMakeFiles/cmTC_4f0bf.dir/build.make CMakeFiles/cmTC_4f0bf.dir/build
 gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_4d0ac.dir/feature_tests.cxx.o
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++11 -o CMakeFiles/cmTC_4d0ac.dir/feature_tests.cxx.o -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_4d0ac
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d0ac.dir/link.txt --verbose=1
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_4d0ac.dir/feature_tests.cxx.o  -o cmTC_4d0ac 
+Building CXX object CMakeFiles/cmTC_4f0bf.dir/feature_tests.cxx.o
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++11 -o CMakeFiles/cmTC_4f0bf.dir/feature_tests.cxx.o -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_4f0bf
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f0bf.dir/link.txt --verbose=1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_4f0bf.dir/feature_tests.cxx.o  -o cmTC_4f0bf 
 gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
 
 
@@ -471,14 +471,14 @@ gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_3
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_a078c/fast"
-/bin/gmake -f CMakeFiles/cmTC_a078c.dir/build.make CMakeFiles/cmTC_a078c.dir/build
+Run Build Command:"/bin/gmake" "cmTC_51b04/fast"
+/bin/gmake -f CMakeFiles/cmTC_51b04.dir/build.make CMakeFiles/cmTC_51b04.dir/build
 gmake[1]: Entering directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a078c.dir/feature_tests.cxx.o
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++98 -o CMakeFiles/cmTC_a078c.dir/feature_tests.cxx.o -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_a078c
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a078c.dir/link.txt --verbose=1
-/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_a078c.dir/feature_tests.cxx.o  -o cmTC_a078c 
+Building CXX object CMakeFiles/cmTC_51b04.dir/feature_tests.cxx.o
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++98 -o CMakeFiles/cmTC_51b04.dir/feature_tests.cxx.o -c /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_51b04
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51b04.dir/link.txt --verbose=1
+/export/tmp/4205_37/opt/poky/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++   --sysroot=/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_51b04.dir/feature_tests.cxx.o  -o cmTC_51b04 
 gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2/CMakeFiles/CMakeTmp'
 
 
@@ -539,4 +539,3 @@ gmake[1]: Leaving directory `/export/tmp/4205_37/Projet/ele4205_projet_aut2021_3
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
-The system is: Linux - 3.10.0-1160.42.2.el7.x86_64 - x86_64
