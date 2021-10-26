@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>capture-Release@debug_oc2</name>
+	<name>client-Debug@debug_client</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -43,11 +43,11 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.arguments</key>
-					<value>-j8</value>
+					<value></value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2</value>
+					<value>/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_client</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
@@ -83,7 +83,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.location</key>
-					<value>/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_oc2</value>
+					<value>/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_client</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
@@ -111,17 +111,7 @@
 		<link>
 			<name>[Source directory]</name>
 			<type>2</type>
-			<location>/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable</location>
-		</link>
-		<link>
-			<name>[Subprojects]</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Subprojects]/capture</name>
-			<type>2</type>
-			<location>/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable</location>
+			<location>/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/client</location>
 		</link>
 		<link>
 			<name>[Targets]</name>
@@ -129,52 +119,7 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] capture</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] capture/</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] capture/Source Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] capture/Source Files/main.cpp</name>
-			<type>1</type>
-			<location>/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/src/main.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] capture/Source Files/cameraCapture.cpp</name>
-			<type>1</type>
-			<location>/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/src/cameraCapture.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] capture/Source Files/common.cpp</name>
-			<type>1</type>
-			<location>/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/src/common.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] capture/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] capture/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] capture/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] capture/Object Files</name>
+			<name>[Targets]/[exe] client</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>

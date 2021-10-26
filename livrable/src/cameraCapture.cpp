@@ -105,3 +105,28 @@ int writeVideo(struct camera camera, int duration)
 
     return 0;
 }
+
+Mat captureImage(struct camera camera)
+{
+    //Open the default video camera
+	VideoCapture cap(0);
+	cap.set(CV_CAP_PROP_FRAME_WIDTH,camera.resX);
+	cap.set(CV_CAP_PROP_FRAME_HEIGHT,camera.resY);
+
+	// if not success, exit program
+	if (cap.isOpened() == false)
+	{
+		cout << "Cannot open the video camera" << endl;
+		cin.get(); //wait for any key press
+		//return -1;
+	}
+
+	Mat frame = Mat::zeros(camera.resX,camera.resY,CV_8UC3);
+    // frame.rows = camera.resX;
+    // frame.cols = camera.resY;
+	bool isSuccess = cap.read(frame); // read a new frame from the video camera
+	//cap >> frame;
+	cap.release();
+
+	return frame;
+}

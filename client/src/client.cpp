@@ -1,107 +1,103 @@
 #include "../include/common.h"
-#include <netdb.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
+#include <opencv2/opencv.hpp>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
-#include <cstring>
-#include <string>
-#include <iostream>
-#include <fstream>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
+using namespace cv;
 using namespace std;
-/*
-	argv[1] => Server IP address
-	argv[2] => Port number
-*/
 
-int main(int argc, char *argv[]){
+uint8_t esc_flag = 0;
+uint16_t resX = 176;
+uint16_t resY = 144;
+ssize_t bytes = 0;
 
-	int sockfd, portno, n;
-	struct sockaddr_in serv_addr;
-	socklen_t addr_len;
+int main(int argc, char *argv[]) {
+	uint32_t buffer = htonl(ELE4205_OK);
+	Mat img = Mat::zeros(resY,resX,CV_8UC3);
+	int imgSize = img.total()*img.elemSize();
+	uchar *sockData;
+	sockData = new uchar[imgSize];
+
+	if (argc < 2 || argc > 3) // Test for correct number of arguments
+		DieWithUserMessage("Parameter(s)","<Server Address> <Echo Word> [<Server Port>]");
+
+	char *servIP = argv[1];     // First arg: server IP address (dotted quad)
+
+	// Third arg (optional): server port (numeric).  7 is well-known echo port
+	in_port_t servPort = (argc == 3) ? atoi(argv[2]) : 7;
+
+	// Create a reliable, stream socket using TCP
+	int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	if (sock < 0)
+		DieWithSystemMessage("socket() failed");
+
+	// Construct the server address structure
+	struct sockaddr_in servAddr;            // Server address
+	memset(&servAddr, 0, sizeof(servAddr)); // Zero out structure
+	servAddr.sin_family = AF_INET;          // IPv4 address family
+
+	// Convert address
+	int rtnVal = inet_pton(AF_INET, servIP, &servAddr.sin_addr.s_addr);
+	if (rtnVal == 0)
+		DieWithUserMessage("inet_pton() failed", "invalid address string");
+	else if (rtnVal < 0)
+		DieWithSystemMessage("inet_pton() failed");
+	servAddr.sin_port = htons(servPort);    // Server port
+
+	// Establish the connection to the echo server
+	if (connect(sock, (struct sockaddr *) &servAddr, sizeof(servAddr)) < 0)
+		DieWithSystemMessage("connect() failed");
 	
-	if (argc != 3){
-		perror("Invalid number of arguments.");
-		return 0;
-	}
-
-	memset(&serv_addr,0,sizeof(serv_addr));
-	portno = atoi(argv[2]);
-   	serv_addr.sin_family = AF_INET;
-    /* serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-	serv_addr.sin_port = htons(portno);
-	addr_len = sizeof(serv_addr);*/
-
-	char* servIP = argv[1];
-
-	int rtnVal = inet_pton(AF_INET,servIP,&serv_addr.sin_addr.s_addr);
-	// ajouter message d'erreur si adresse invalide
-	serv_addr.sin_port = htons(portno);
-
-	sockfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	if (sockfd < 0){
-		perror("Couldn't create the socket.");
-		return 0;
-	}
-
-	if (connect(sockfd, (struct sockaddr*)&serv_addr,sizeof(serv_addr)) < 0){
-		perror("Connection failed.");
-		return 0;
-	}
-
-	init_packet ipkt;
-
-	if (recv(sockfd,&ipkt,sizeof(ipkt),MSG_WAITALL) < 0){
-		perror("Packet couldn't be read.");
-		return 0;
-	}
-
-	if (ipkt.msg != MSG_INIT){
-		perror("Packet is not an initialisation packet");
-		return 0;
-	}
-
-	ofstream ofs(string(ipkt.filename).c_str(), ios::out | ios::binary);
-
-	long long int bytes_received = 0;
-	char buffer[BUFFER_SIZE];
-
-	while (bytes_received != ipkt.filesize){
-		if (BUFFER_SIZE > ipkt.filesize - bytes_received){
-			if (n=read(sockfd,&buffer,ipkt.filesize-bytes_received) < 0){
-				perror("Error during read.");
-				return 0;			
-			}
+	while(esc_flag == 0){
+		// Press  ESC on keyboard to exit
+	  	int c = waitKey(30) & 0xFF;
+	  	if(c==27){
+	  		buffer = htonl(ELE4205_QUIT);
+			esc_flag = 1;
 		} else {
-			if (n = read(sockfd,&buffer,BUFFER_SIZE) < 0){
-				perror("Error during read.");
-				return 0;
+			buffer = htonl(ELE4205_OK);
+		}
+		// Send the string to the server
+		size_t msgLen = sizeof(uint32_t); // Determine input length
+		ssize_t numBytes = send(sock, &buffer, msgLen, 0);
+  		if (numBytes < 0){
+  			DieWithSystemMessage("send() failed");
+			esc_flag = 1;
+		}
+  		else if (numBytes != msgLen) {
+  			DieWithUserMessage("send()", "sent unexpected number of bytes");
+			esc_flag = 1;
+		}
+		bytes = 0;
+		sockData = new uchar[imgSize];
+		for (int i = 0; i < imgSize; i += bytes){			
+			if ((bytes = recv(sock, sockData +i, imgSize -i, 0)) == -1){
+				DieWithSystemMessage("recv() failed");
+				esc_flag = 1;
 			}
 		}
 
-		ofs.write(buffer,n);
-
-		bytes_received += n;
+		int ptr = 0;
+		for (int i = 0; i < img.rows; i++) {
+			for (int j = 0; j < img.cols; j++){
+				img.at<cv::Vec3b>(i,j) = cv::Vec3b(sockData[ptr+0], sockData[ptr+1], sockData[ptr+2]);
+				ptr = ptr+3;
+			}	
+		}
+		namedWindow("Stream",CV_WINDOW_AUTOSIZE);
+		imshow("Stream", img);		
 	}
 
-	if (recv(sockfd,&ipkt,sizeof(ipkt),MSG_WAITALL) < 0){
-		perror("Packet couldn't be read.");
-		return 0;
-	}
 
-	if (ipkt.msg != MSG_END){
-		perror("Packet is not an end packet.");
-		return 0;
-	}
+  fputc('\n', stdout); // Print a final linefeed
 
-	cout << "Closing socket ..." << endl;
-
-	ofs.close();
-
-	if (close(sockfd) < 0){
-		perror("Socket failed to close.");
-		return 0;
-	}
-	return 0;
+  close(sock);
+  exit(0);
 }
+

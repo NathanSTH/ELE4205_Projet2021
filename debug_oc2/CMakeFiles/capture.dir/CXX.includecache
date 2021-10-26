@@ -21,6 +21,18 @@ stdlib.h
 -
 fstream
 -
+netdb.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+unistd.h
+-
+opencv2/opencv.hpp
+-
+cameraCapture.h
+/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/include/cameraCapture.h
 
 /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/src/cameraCapture.cpp
 ../include/cameraCapture.h
@@ -29,8 +41,24 @@ fstream
 /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/src/common.cpp
 ../include/common.h
 /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/include/common.h
+opencv2/opencv.hpp
+-
 
 /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/src/main.cpp
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
 opencv2/opencv.hpp
 -
 iostream
@@ -41,11 +69,7 @@ iostream
 /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/livrable/include/common.h
 netdb.h
 -
-netinet/in.h
--
 unistd.h
--
-string.h
 -
 fstream
 -
@@ -66,6 +90,12 @@ gconv.h
 features.h
 -
 stddef.h
+-
+
+/export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/include/arpa/inet.h
+features.h
+-
+netinet/in.h
 -
 
 /export/tmp/4205_37/opt/poky/sysroots/aarch64-poky-linux/usr/include/asm-generic/socket.h
