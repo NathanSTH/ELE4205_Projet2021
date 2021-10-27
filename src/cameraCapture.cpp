@@ -3,13 +3,9 @@
 using namespace cv;
 using namespace std;
 
-uint16_t resX_all[nbRes] = {176,160,320,320,352,432,800,864,960,960,1184,1280,1280};
-uint16_t resY_all[nbRes] = {144,120,176,240,288,240,600,480,544,720,656,720,960};
-double fps_all[nbRes];
-
 double *get_timing()
 {
-  for (int i = 0; i<1; ++i)
+  for (int i = 0; i<13; ++i)
     {
       VideoCapture capture(0);
       capture.set(CV_CAP_PROP_FRAME_WIDTH,resX_all[i]);
@@ -122,8 +118,6 @@ Mat captureImage(struct camera camera)
 	}
 
 	Mat frame = Mat::zeros(camera.resX,camera.resY,CV_8UC3);
-    // frame.rows = camera.resX;
-    // frame.cols = camera.resY;
 	bool isSuccess = cap.read(frame); // read a new frame from the video camera
 	cap >> frame;
 	cap.release();

@@ -19,7 +19,10 @@
 	*@param clntSocket Socket number assigned to the connection with the client.
 	*@param frame Contains the Mat object with header details.
 	*@param cap Selected video camera.
+	*@param camera Selected camera specifications.
 	**/
-void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap);
+void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera);
+
+void UpdateRes (uint32_t messages, VideoCapture &cap, Camera &camera, Mat &frame);
 
 #endif

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.4)
 add_definitions(-std=c++11)
 project(client)
-add_executable(client ../src/client.cpp ../src/common.cpp)
+add_executable(client ../src/client.cpp ../src/common.cpp ../src/handleClient.cpp)
 
 find_package(OpenCV REQUIRED)
 if(OpenCV_FOUND)

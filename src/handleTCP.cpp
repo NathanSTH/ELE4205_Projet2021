@@ -2,21 +2,24 @@
 
 using namespace std;
 
-void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap){
+uint32_t currentRes = 0;
 
-	uint32_t buffer;
+void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera){
+	uint32_t messages;
 
 	// Receive message from client
-	ssize_t numBytesRcvd = recv(clntSocket, &buffer, sizeof(uint32_t), 0);
-	buffer = ntohl(buffer);
+	ssize_t numBytesRcvd = recv(clntSocket, &messages, sizeof(uint32_t), 0);
+	messages = ntohl(messages);
 	
 	if (numBytesRcvd < 0){
 		close (clntSocket); // Close client socket
-		DieWithSystemMessage("recv() failed");
-		
+		DieWithSystemMessage("recv() failed");	
 	}
-	
-	if(buffer == ELE4205_OK){
+	cout << messages << endl;
+	if((messages & MASK_STATUS) == ELE4205_OK){
+		if ((messages & MASK_RES) != currentRes){
+      			UpdateRes(messages, cap, camera, frame);
+		}
 		bool isSuccess = cap.read(frame); // read a new frame from the video camera
 
 		if(isSuccess == false)
@@ -34,11 +37,40 @@ void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap){
 		else if (numBytesSent != frameSize)
 			DieWithUserMessage("send()", "sent unexpected number of bytes");
 
-	} else if (buffer == ELE4205_QUIT) {
+	} else if ((messages & MASK_STATUS) == ELE4205_QUIT) {
 		close (clntSocket);
 		DieWithSystemMessage("Quit message received, closing socket."); // Close client socket
 	}
-	else {
-		cout << "else : " << buffer << endl;
+}
+
+void UpdateRes (uint32_t messages, VideoCapture &cap, Camera &camera, Mat &frame){
+	switch (messages & MASK_RES){
+		case RES01 :
+			currentRes = RES01;
+			camera.resX = resX_all[12]; //1280
+			camera.resY = resY_all[12]; //960
+			//camera.fps = fps_all[12];
+			break;
+		case RES02 :
+			currentRes = RES02;
+			camera.resX = resX_all[6]; //800
+			camera.resY = resY_all[6]; //600
+			//camera.fps = fps_all[6];
+			break;
+		case RES03 :
+			currentRes = RES03;
+			camera.resX = resX_all[3]; //320
+			camera.resY = resY_all[3]; //240
+			//camera.fps = fps_all[3];
+			break;
+		case RES04 :
+			currentRes = RES04;
+			camera.resX = resX_all[0]; //176
+			camera.resY = resY_all[0]; //144
+			//camera.fps = fps_all[0];
+			break;
 	}
+	cap.set(CV_CAP_PROP_FRAME_WIDTH, camera.resX);
+	cap.set(CV_CAP_PROP_FRAME_HEIGHT, camera.resY);
+	frame = Mat::zeros(camera.resY,camera.resX,CV_8UC3);
 }

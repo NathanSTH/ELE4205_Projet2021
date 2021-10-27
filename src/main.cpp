@@ -23,9 +23,9 @@ Camera camera;
 
 int main(int argc, char *argv[]) {
 	//get_timing();
-	camera.resX = resX_all[12];
-	camera.resY = resY_all[12];
-	camera.fps = fps_all[12];
+	camera.resX = resX_all[0];
+	camera.resY = resY_all[0];
+	camera.fps = fps_all[0];
 
   if (argc != 2) // Test for correct number of arguments
     DieWithUserMessage("Parameter(s)", "<Server Port>");
@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
         sizeof(clntName)) != NULL)
       printf("Handling client %s/%d\n", clntName, ntohs(clntAddr.sin_port));
     else
-      puts("Unable to get client address");
+	puts("Unable to get client address");
 	Mat frame = Mat::zeros(camera.resY,camera.resX,CV_8UC3);
 
 	//Open the default video camera	
@@ -83,8 +83,7 @@ int main(int argc, char *argv[]) {
 	}
 
   for (;;) { // Run forever
-	frame = Mat::zeros(camera.resY,camera.resX,CV_8UC3);
-    HandleTCPClient(clntSock, frame, cap);
+  	HandleTCPClient(clntSock, frame, cap, camera);
   }
   // NOT REACHED
 }

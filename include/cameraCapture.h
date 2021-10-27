@@ -8,11 +8,6 @@
 using namespace cv;
 
 /**
-   \var nbRes
-   \brief Number of possible resolutions for the Logitech C270.
-**/
-#define nbRes 13
-/**
    \var nbFrames
    \brief Number of frames to capture, to calculate the framerate.
 **/

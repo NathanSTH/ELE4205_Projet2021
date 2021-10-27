@@ -177,6 +177,30 @@ export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.s
 .PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp.s
 
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.o: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.o
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.o
+
+# target to build an object file
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.o
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.o
+
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.i: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.i
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.i
+
+# target to preprocess a source file
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.i
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.i
+
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.s: export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.s
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.s
+
+# target to generate assembly for a file
+export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.s
+.PHONY : export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +216,9 @@ help:
 	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.o"
 	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.i"
 	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.s"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.o"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.i"
+	@echo "... export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.s"
 .PHONY : help
 
 

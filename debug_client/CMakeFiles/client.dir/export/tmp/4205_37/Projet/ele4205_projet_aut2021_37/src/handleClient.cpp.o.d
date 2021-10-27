@@ -1,7 +1,7 @@
-CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/client.cpp.o: \
- /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/client.cpp \
+CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.o: \
+ /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp \
  /usr/include/stdc-predef.h \
- /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/../include/common.h \
+ /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/../include/handleClient.h \
  /usr/include/stdio.h /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h \
@@ -193,6 +193,5 @@ CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cl
  /usr/include/opencv2/contrib/openfabmap.hpp /usr/include/c++/4.8.2/set \
  /usr/include/c++/4.8.2/bits/stl_set.h \
  /usr/include/c++/4.8.2/bits/stl_multiset.h \
- /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/../include/cameraCapture.h \
- /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/../include/handleClient.h \
- /usr/include/arpa/inet.h
+ /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/../include/common.h \
+ /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/../include/cameraCapture.h
