@@ -23,9 +23,9 @@ Camera camera;
 
 int main(int argc, char *argv[]) {
 	//get_timing();
-	camera.resX = resX_all[0];
-	camera.resY = resY_all[0];
-	camera.fps = fps_all[0];
+	camera.resX = resX_all[12];
+	camera.resY = resY_all[12];
+	camera.fps = fps_all[12];
 
   if (argc != 2) // Test for correct number of arguments
     DieWithUserMessage("Parameter(s)", "<Server Port>");

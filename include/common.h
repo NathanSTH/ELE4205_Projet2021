@@ -25,12 +25,36 @@
 **/
 #define ELE4205_QUIT 0b0
 
+/**
+   \var RES01
+   \brief Flag transmitted from client to server indicating that the desired resolution is 1280*960.
+**/
 #define RES01 0b000
+/**
+   \var RES02
+   \brief Flag transmitted from client to server indicating that the desired resolution is 700*600.
+**/
 #define RES02 0b010
+/**
+   \var RES03
+   \brief Flag transmitted from client to server indicating that the desired resolution is 320*240.
+**/
 #define RES03 0b100
+/**
+   \var RES04
+   \brief Flag transmitted from client to server indicating that the desired resolution is 176*144.
+**/
 #define RES04 0b110
 
+/**
+   \var MASK_STATUS
+   \brief Mask used to get the current status of the client : 1 = OK, 0 = QUIT.
+**/
 #define MASK_STATUS 0b1
+/**
+   \var MASK_RES
+   \brief Mask used to get the current resolution.
+**/
 #define MASK_RES 0b110
 
 /**
@@ -39,8 +63,20 @@
 **/
 #define nbRes 13
 
+/**
+   \var resX_all
+   \brief Array that contains all the available resolutions width for the Logitech C270.
+**/
 extern uint16_t resX_all[nbRes];
+/**
+   \var resY_all
+   \brief Array that contains all the available resolutions heigth for the Logitech C270.
+**/
 extern uint16_t resY_all[nbRes];
+/**
+   \var fps_all
+   \brief Array that contains all the available frame rates for the Logitech C270.
+**/
 extern double fps_all[nbRes];
 
 /**

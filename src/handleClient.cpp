@@ -39,7 +39,7 @@ void PrintResOptions(void){
 	cout << endl;
 }
 
-void ChangeResClient(Mat &img, uint32_t messages, uint32_t &resX, uint32_t &resY, uint32_t &currentRes, uint32_t &imgSize){
+void ChangeResClient(Mat &img, uint32_t messages, uint32_t &resX, uint32_t &resY, uint32_t &currentRes, int &imgSize){
 	if ((messages & MASK_RES) != currentRes){
 		switch (messages & MASK_RES){
 			case RES01 :

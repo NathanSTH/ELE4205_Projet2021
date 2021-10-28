@@ -23,6 +23,14 @@
 	**/
 void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera);
 
+/**
+	\fn UpdateRes
+	\brief This updates the image resolution for the server.
+	*@param messages Variable that contains selected resolution and status.
+	*@param cap Selected video camera.
+	*@param camera Selected camera specifications.
+	*@param frame Contains the Mat object with header details.
+	**/
 void UpdateRes (uint32_t messages, VideoCapture &cap, Camera &camera, Mat &frame);
 
 #endif

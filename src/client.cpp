@@ -72,7 +72,6 @@ int main(int argc, char *argv[]) {
 
 		bytes = 0;
 		sockData = new uchar[imgSize];
-		cout << "Juste avant recv : " << imgSize << endl;
 
 		for (int i = 0; i < imgSize; i += bytes){			
 			if ((bytes = recv(sock, sockData +i, imgSize -i, 0)) == -1){
@@ -80,8 +79,7 @@ int main(int argc, char *argv[]) {
 				esc_flag = 1;
 			}
 		}
-		cout << resX << endl;
-		cout << resY << endl;
+
 		Mat img(Size(resX, resY), CV_8UC3, sockData);
 		namedWindow("Stream",CV_WINDOW_AUTOSIZE);
 		imshow("Stream", img);
@@ -92,36 +90,7 @@ int main(int argc, char *argv[]) {
 			destroyWindow("Stream");
 		}
 
-		if ((messages & MASK_RES) != currentRes){
-			cout << (messages & MASK_RES) << endl;
-			switch (messages & MASK_RES){
-				case RES01 :
-					currentRes = RES01;
-					resX = resX_all[12]; //1280
-					resY = resY_all[12]; //960
-					break;
-				case RES02 :
-					currentRes = RES02;
-					resX = resX_all[6]; //800
-					resY = resY_all[6]; //600
-					break;
-				case RES03 :
-					currentRes = RES03;
-					resX = resX_all[3]; //320
-					resY = resY_all[3]; //240
-					break;
-				case RES04 :
-					currentRes = RES04;
-					resX = resX_all[0]; //176
-					resY = resY_all[0]; //144
-					break;
-				default :
-					break;
-			}
-		
-		img = Mat::zeros(resY,resX,CV_8UC3);
-		imgSize = img.total()*img.elemSize();
-		}
+		ChangeResClient(img, messages, resX, resY, currentRes, imgSize);
 	}
 	
 

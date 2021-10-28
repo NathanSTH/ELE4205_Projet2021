@@ -2,7 +2,7 @@
 
 using namespace std;
 
-uint32_t currentRes = 0;
+uint32_t currentRes = RES01;
 
 void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera){
 	uint32_t messages;
@@ -15,19 +15,16 @@ void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera
 		close (clntSocket); // Close client socket
 		DieWithSystemMessage("recv() failed");	
 	}
-	cout << messages << endl;
 	if((messages & MASK_STATUS) == ELE4205_OK){
 		if ((messages & MASK_RES) != currentRes){
       			UpdateRes(messages, cap, camera, frame);
 		}
 		bool isSuccess = cap.read(frame); // read a new frame from the video camera
-
 		if(isSuccess == false)
 			DieWithSystemMessage("Could not capture an image");
 
 		frame = (frame.reshape(0,1)); // make the frame continuous
 		uint32_t frameSize = frame.total()*frame.elemSize();
-
 		ssize_t numBytesSent = send(clntSocket, frame.data, frameSize, 0);
 		if (numBytesSent < 0){
 			close (clntSocket); // Close client socket
@@ -36,7 +33,6 @@ void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera
 
 		else if (numBytesSent != frameSize)
 			DieWithUserMessage("send()", "sent unexpected number of bytes");
-
 	} else if ((messages & MASK_STATUS) == ELE4205_QUIT) {
 		close (clntSocket);
 		DieWithSystemMessage("Quit message received, closing socket."); // Close client socket
