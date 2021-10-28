@@ -14,20 +14,17 @@
 #include "common.h"
 
 /**
-	\fn HandleWaitKey
 	\brief This function handles the verification of the pressed key to change resolution or quit.
 	*@param waitTime Time to wait for a key entry (in ms).
 	*@param messages Variable that contains selected resolution and status.
 	**/
 void HandleWaitKey(int waitTime, uint32_t &messages);
 /**
-	\fn PrintResOptions
 	\brief This function displays the resolution options in the console.
 	**/
 void PrintResOptions(void);
 
 /**
-	\fn ChangeResClient
 	\brief This function handles the resolution change for the client.
 	*@param img Image to be updated.
 	*@param messages Variable that contains selected resolution and status.

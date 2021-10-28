@@ -79,14 +79,11 @@ extern uint16_t resY_all[nbRes];
 **/
 extern double fps_all[nbRes];
 
-/**
-	\fn DieWithUserMessage
-	\brief This function ends the running process while displaying user error messages. 
+/**	\brief This function ends the running process while displaying user error messages. 
 	**/
 void DieWithUserMessage(const char *msg, const char *detail);
-/**
-	\fn DieWithUserMessage
-	\brief This function ends the running process while displaying system error messages. 
+
+/**	\brief This function ends the running process while displaying system error messages. 
 	**/
 void DieWithSystemMessage(const char *msg);
 

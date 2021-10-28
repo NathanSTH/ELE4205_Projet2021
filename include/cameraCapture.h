@@ -48,28 +48,25 @@ struct camera {
 	double fps;
 };
 
-/**Typedef for struct camera.*/
+/**
+	\var Typedef for struct camera.
+	**/
 typedef struct camera Camera;
 
-/**
-	\fn get_timing
-	\brief This function computes all framerates values corresponding to the resolution options contained in resX_all and resY_all.
-	*@return double Returns an array of frame rates.
+/**	\brief This function computes all framerates values corresponding to the resolution options contained in resX_all and resY_all.
+	\return double Returns an array of frame rates.
 	**/
 double *get_timing();
 
-/**
- *This function uses the camera to record a video for a selected duration, with the selected camera parameters. This video is then saved to the Odroid-C2 on "/home/root/capture-liv1.avi".
- *@param camera The struct camera object used to record video. Contains resolution width (resX), resolution heigth (resY) and the corresponding framerate (fps).
- *@param duration Duration in seconds of the video to record.
-	*/
+/**	\brief This function uses the camera to record a video for a selected duration, with the selected camera parameters. This video is then saved to the Odroid-C2 on "/home/root/capture-liv1.avi".
+ 	\param camera The struct camera object used to record video. Contains resolution width (resX), resolution heigth (resY) and the corresponding framerate (fps).
+	\param duration Duration in seconds of the video to record.
+	**/
 int writeVideo(struct camera, int duration);
 
-/**
- *This function uses the camera to capture a single frame with the selected camera parameters.
- *@param camera The struct camera object used to capture the frame. Contains resolution width (resX), resolution heigth (resY) and the corresponding framerate (fps).
- *@return Mat The frame captured.
-	*/
+/**	\brief This function uses the camera to capture a single frame with the selected camera parameters.
+	\param camera The struct camera object used to capture the frame. Contains resolution width (resX), resolution heigth (resY) and the corresponding framerate (fps).
+	**/
 Mat captureImage(struct camera camera);
 
 #endif

@@ -14,7 +14,6 @@
 #include "common.h"
 
 /**
-	\fn HandleTCPClient
 	\brief This function handles the TCP connection with the client, on the server side.
 	*@param clntSocket Socket number assigned to the connection with the client.
 	*@param frame Contains the Mat object with header details.
@@ -24,7 +23,6 @@
 void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera);
 
 /**
-	\fn UpdateRes
 	\brief This updates the image resolution for the server.
 	*@param messages Variable that contains selected resolution and status.
 	*@param cap Selected video camera.
