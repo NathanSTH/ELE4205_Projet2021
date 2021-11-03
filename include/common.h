@@ -47,6 +47,24 @@
 #define RES04 0b110
 
 /**
+   \var READY
+   \brief Flag transmitted from server to client indicating that the light intensity is OK and that the server is ready to transfer.
+**/
+#define READY 0b00000
+
+/**
+   \var IDOWN
+   \brief Flag transmitted from server to client indicating that there is not enough light to capture an image.
+**/
+#define IDOWN 0b01000
+
+/**
+   \var PUSHB
+   \brief Flag transmitted from server to client indicating that there is enough light and that the button has been pressed to save the image.
+**/
+#define PUSHB 0b10000
+
+/**
    \var MASK_STATUS
    \brief Mask used to get the current status of the client : 1 = OK, 0 = QUIT.
 **/
@@ -57,11 +75,14 @@
 **/
 #define MASK_RES 0b110
 
+#define MASK_SERV 0b11000
+
 /**
    \var nbRes
    \brief Number of possible resolutions for the Logitech C270.
 **/
 #define nbRes 13
+
 
 /**
    \var resX_all

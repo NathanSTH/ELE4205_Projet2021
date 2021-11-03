@@ -270,6 +270,13 @@ CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cl
   /usr/include/c++/4.8.2/bits/stl_set.h \
   /usr/include/c++/4.8.2/bits/stl_multiset.h \
   /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h \
+  /usr/include/c++/4.8.2/memory \
+  /usr/include/c++/4.8.2/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/4.8.2/ext/concurrence.h \
+  /usr/include/c++/4.8.2/bits/unique_ptr.h \
+  /usr/include/c++/4.8.2/bits/shared_ptr.h \
+  /usr/include/c++/4.8.2/bits/shared_ptr_base.h \
+  /usr/include/c++/4.8.2/backward/auto_ptr.h \
   /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/handleClient.h \
   /usr/include/arpa/inet.h
 
@@ -541,7 +548,14 @@ CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/co
   /usr/include/c++/4.8.2/set \
   /usr/include/c++/4.8.2/bits/stl_set.h \
   /usr/include/c++/4.8.2/bits/stl_multiset.h \
-  /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h
+  /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h \
+  /usr/include/c++/4.8.2/memory \
+  /usr/include/c++/4.8.2/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/4.8.2/ext/concurrence.h \
+  /usr/include/c++/4.8.2/bits/unique_ptr.h \
+  /usr/include/c++/4.8.2/bits/shared_ptr.h \
+  /usr/include/c++/4.8.2/bits/shared_ptr_base.h \
+  /usr/include/c++/4.8.2/backward/auto_ptr.h
 
 CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp.o: /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/handleClient.cpp \
   /usr/include/stdc-predef.h \
@@ -812,10 +826,23 @@ CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/ha
   /usr/include/c++/4.8.2/bits/stl_set.h \
   /usr/include/c++/4.8.2/bits/stl_multiset.h \
   /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/common.h \
-  /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h
+  /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h \
+  /usr/include/c++/4.8.2/memory \
+  /usr/include/c++/4.8.2/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/4.8.2/ext/concurrence.h \
+  /usr/include/c++/4.8.2/bits/unique_ptr.h \
+  /usr/include/c++/4.8.2/bits/shared_ptr.h \
+  /usr/include/c++/4.8.2/bits/shared_ptr_base.h \
+  /usr/include/c++/4.8.2/backward/auto_ptr.h
 
 
 /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/common.cpp:
+
+/usr/include/c++/4.8.2/backward/auto_ptr.h:
+
+/usr/include/c++/4.8.2/bits/shared_ptr_base.h:
+
+/usr/include/c++/4.8.2/memory:
 
 /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h:
 
@@ -856,6 +883,8 @@ CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/ha
 /usr/include/c++/4.8.2/list:
 
 /usr/include/opencv2/video/background_segm.hpp:
+
+/usr/include/c++/4.8.2/bits/unique_ptr.h:
 
 /usr/include/opencv2/video/tracking.hpp:
 
@@ -1036,6 +1065,8 @@ CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/ha
 /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/gthr-default.h:
 
 /usr/include/bits/waitstatus.h:
+
+/usr/include/c++/4.8.2/bits/shared_ptr.h:
 
 /usr/include/c++/4.8.2/bits/exception_defines.h:
 
@@ -1247,6 +1278,8 @@ CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/ha
 
 /usr/include/getopt.h:
 
+/usr/include/c++/4.8.2/bits/stl_raw_storage_iter.h:
+
 /usr/include/c++/4.8.2/random:
 
 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/mm_malloc.h:
@@ -1312,6 +1345,8 @@ CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/ha
 /usr/include/opencv2/core/types_c.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/mmintrin.h:
+
+/usr/include/c++/4.8.2/ext/concurrence.h:
 
 /usr/include/bits/huge_val.h:
 

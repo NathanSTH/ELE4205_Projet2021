@@ -8,7 +8,7 @@
 
 #include <opencv2/opencv.hpp>
 #include <iostream>
-#include "../include/cameraCapture.h"
+
 #include "../include/common.h"
 #include "../include/handleTCP.h"
 #include <netdb.h>
@@ -87,8 +87,14 @@ int main(int argc, char *argv[]) {
 		cin.get(); //wait for any key press
 		//return -1;
 	}
+	bool chkGPIO = initGPIO();
+	if (!chkGPIO){
+		cout << "Cannot initialize GPIO" << endl;
+	}
 
   for (;;) { // Run forever
+	//bool chkLight = checkLight();
+	//bool chkGPIO = checkGPIO();
   	HandleTCPClient(clntSock, frame, cap, camera);
   }
   // NOT REACHED

@@ -13,6 +13,16 @@ iostream
 -
 time.h
 -
+cstdio
+-
+memory
+-
+stdexcept
+-
+string
+-
+array
+-
 
 /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/common.h
 stdio.h
@@ -93,8 +103,6 @@ opencv2/opencv.hpp
 -
 iostream
 -
-../include/cameraCapture.h
-/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/cameraCapture.h
 ../include/common.h
 /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/include/common.h
 ../include/handleTCP.h

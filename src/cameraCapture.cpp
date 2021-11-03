@@ -124,3 +124,41 @@ Mat captureImage(struct camera camera)
 
 	return frame;
 }
+
+bool checkLight(void)
+{
+	int adcValue;
+	FILE *fp = fopen("/sys/class/saradc/ch0","r");
+	fscanf(fp, "%i", &adcValue);
+	fclose(fp);
+	if (adcValue < 1000){
+		return true;
+	} else {
+		return false;
+	}
+}
+
+bool initGPIO(void)
+{
+	system("echo 228 > /sys/class/gpio/export");
+	system("echo in > /sys/class/gpio/gpio228/direction");
+	bool gpio = checkGPIO();
+	if (gpio == 0 | gpio == 1){
+		return true;
+	} else {
+		return false;
+	}
+}
+
+bool checkGPIO(void)
+{
+	int gpioValue;
+	FILE *fp = fopen("/sys/class/gpio/gpio228/value", "r");
+	fscanf(fp, "%i", &gpioValue);
+	fclose(fp);
+	if (gpioValue == 0){
+		return true;
+	} else {
+		return false;
+	}
+}

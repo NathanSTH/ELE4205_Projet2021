@@ -20,7 +20,7 @@ uint32_t currentRes = RES01;
 int main(int argc, char *argv[]) {
 	uint32_t resX = 1280;
 	uint32_t resY = 960;
-	uint32_t messages = ELE4205_OK;
+	uint32_t messages = 0;
 	Mat img = Mat::zeros(resY,resX,CV_8UC3);
 	int imgSize = img.total()*img.elemSize();
 	uchar *sockData;
@@ -57,17 +57,47 @@ int main(int argc, char *argv[]) {
 		DieWithSystemMessage("connect() failed");
 	PrintResOptions();
 	while(esc_flag == 0){
-		// Send the string to the server
-		size_t msgLen = sizeof(uint32_t); // Determine input length
-		uint32_t buffer = htonl(messages);
-		ssize_t numBytes = send(sock, &buffer, msgLen, 0);
-  		if (numBytes < 0){
-  			DieWithSystemMessage("send() failed");
-			esc_flag = 1;
+		
+
+		// Receive message from server
+		ssize_t numBytesRcvd = recv(sock, &messages, sizeof(uint32_t), 0);
+		messages = ntohl(messages);
+		
+		if (numBytesRcvd < 0){
+			DieWithSystemMessage("recv() failed");	
 		}
-  		else if (numBytes != msgLen) {
-  			DieWithUserMessage("send()", "sent unexpected number of bytes");
+		uint32_t flag = (messages & MASK_SERV);
+		if(flag == READY || flag == PUSHB){
+			messages = ELE4205_OK;
+			size_t msgLen = sizeof(uint32_t); // Determine input length
+			uint32_t buffer = htonl(messages);
+			ssize_t numBytes = send(sock, &buffer, msgLen, 0);
+	  		if (numBytes < 0){
+	  			DieWithSystemMessage("send() failed");
+				esc_flag = 1;
+			}
+	  		else if (numBytes != msgLen) {
+	  			DieWithUserMessage("send()", "sent unexpected number of bytes");
+				esc_flag = 1;
+			}
+
+			//if(flag == PUSHB)
+				//fork();
+
+		}else if(flag == IDOWN){
+			messages = ELE4205_QUIT;
+			size_t msgLen = sizeof(uint32_t); // Determine input length
+			uint32_t buffer = htonl(messages);
+			ssize_t numBytes = send(sock, &buffer, msgLen, 0);
+	  		if (numBytes < 0){
+	  			DieWithSystemMessage("send() failed");
+			}
+	  		else if (numBytes != msgLen) {
+	  			DieWithUserMessage("send()", "sent unexpected number of bytes");
+			}
+
 			esc_flag = 1;
+			destroyWindow("Stream");
 		}
 
 		bytes = 0;
@@ -78,11 +108,10 @@ int main(int argc, char *argv[]) {
 				DieWithSystemMessage("recv() failed");
 				esc_flag = 1;
 			}
-		}
-
+		}	
 		Mat img(Size(resX, resY), CV_8UC3, sockData);
 		namedWindow("Stream",CV_WINDOW_AUTOSIZE);
-		imshow("Stream", img);
+		imshow("Stream", img);	
 
 		HandleWaitKey(30, messages);
 		if ((messages & MASK_STATUS) == 0){

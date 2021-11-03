@@ -6,7 +6,20 @@ uint32_t currentRes = RES01;
 
 void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera){
 	uint32_t messages;
-
+	if(checkLight()){
+		if(checkGPIO())
+			messages = MASK_SERV & PUSHB;
+		else
+			messages = MASK_SERV & READY;
+	}else
+		messages = MASK_SERV & IDOWN;
+	uint32_t buf = htonl(messages);
+	// Send status message to client
+	ssize_t numBytesSent = send(clntSocket, &buf, sizeof(uint32_t), 0);
+	if (numBytesSent < 0){
+		close (clntSocket); // Close client socket
+		DieWithSystemMessage("send() failed");			
+	}
 	// Receive message from client
 	ssize_t numBytesRcvd = recv(clntSocket, &messages, sizeof(uint32_t), 0);
 	messages = ntohl(messages);

@@ -194,5 +194,12 @@ CMakeFiles/client.dir/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/cl
  /usr/include/c++/4.8.2/bits/stl_set.h \
  /usr/include/c++/4.8.2/bits/stl_multiset.h \
  /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/../include/cameraCapture.h \
+ /usr/include/c++/4.8.2/memory \
+ /usr/include/c++/4.8.2/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/4.8.2/ext/concurrence.h \
+ /usr/include/c++/4.8.2/bits/unique_ptr.h \
+ /usr/include/c++/4.8.2/bits/shared_ptr.h \
+ /usr/include/c++/4.8.2/bits/shared_ptr_base.h \
+ /usr/include/c++/4.8.2/backward/auto_ptr.h \
  /export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/src/../include/handleClient.h \
  /usr/include/arpa/inet.h

@@ -5,6 +5,13 @@
 #include <iostream>
 #include <time.h>
 
+// pour appels systeme
+#include <cstdio>
+#include <memory>
+#include <stdexcept>
+#include <string>
+#include <array>
+
 using namespace cv;
 
 /**
@@ -68,5 +75,11 @@ int writeVideo(struct camera, int duration);
 	\param camera The struct camera object used to capture the frame. Contains resolution width (resX), resolution heigth (resY) and the corresponding framerate (fps).
 	**/
 Mat captureImage(struct camera camera);
+
+bool checkLight(void);
+
+bool initGPIO(void);
+
+bool checkGPIO(void);
 
 #endif
