@@ -13,6 +13,8 @@
 #include "cameraCapture.h"
 #include "common.h"
 
+void initTCP(int argc, char *argv[]);
+
 /**
 	\brief This function handles the TCP connection with the client, on the server side.
 	*@param clntSocket Socket number assigned to the connection with the client.

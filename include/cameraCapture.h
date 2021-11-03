@@ -53,20 +53,29 @@ struct camera {
 	**/
 typedef struct camera Camera;
 
-/**	\brief This function computes all framerates values corresponding to the resolution options contained in resX_all and resY_all.
+/**	\fn get_timing
+	\brief This function computes all framerates values corresponding to the resolution options contained in resX_all and resY_all.
 	\return double Returns an array of frame rates.
 	**/
 double *get_timing();
 
-/**	\brief This function uses the camera to record a video for a selected duration, with the selected camera parameters. This video is then saved to the Odroid-C2 on "/home/root/capture-liv1.avi".
+/**	\fn writeVideo
+	\brief This function uses the camera to record a video for a selected duration, with the selected camera parameters. This video is then saved to the Odroid-C2 on "/home/root/capture-liv1.avi".
  	\param camera The struct camera object used to record video. Contains resolution width (resX), resolution heigth (resY) and the corresponding framerate (fps).
 	\param duration Duration in seconds of the video to record.
 	**/
 int writeVideo(struct camera, int duration);
 
-/**	\brief This function uses the camera to capture a single frame with the selected camera parameters.
+/**	\fn captureImage
+	\brief This function uses the camera to capture a single frame with the selected camera parameters.
 	\param camera The struct camera object used to capture the frame. Contains resolution width (resX), resolution heigth (resY) and the corresponding framerate (fps).
 	**/
 Mat captureImage(struct camera camera);
+
+/** \fn checkLight
+	\brief This function look at the current room lighting trough a photoresistor and return true when it is adequate
+	\param camera The struct camera object used to capture the frame. Contains resolution width (resX), resolution heigth (resY) and the corresponding framerate (fps).
+**/
+bool checkLight(struct camera camera);
 
 #endif

@@ -124,3 +124,9 @@ Mat captureImage(struct camera camera)
 
 	return frame;
 }
+
+//TODO: read the tension of AINO (pin 40). It can be accessed through ch0 of /sys/class/saradc repository
+bool checkLight(struct camera camera)
+{
+  return true;
+}
