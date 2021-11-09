@@ -35,4 +35,6 @@ void PrintResOptions(void);
 	**/
 void ChangeResClient(Mat &img, uint32_t messages, uint32_t &resX, uint32_t &resY, uint32_t &currentRes, int &imgSize);
 
+void sendMsg2Server(int sock, uint32_t messages, uint8_t &esc_flag);
+
 #endif

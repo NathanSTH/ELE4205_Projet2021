@@ -56,19 +56,22 @@ int main(int argc, char *argv[]) {
 	if (connect(sock, (struct sockaddr *) &servAddr, sizeof(servAddr)) < 0)
 		DieWithSystemMessage("connect() failed");
 	PrintResOptions();
+
 	while(esc_flag == 0){
-		
+		messages = messages | ELE4205_OK;
+		sendMsg2Server(sock, messages, esc_flag);
 
 		// Receive message from server
-		ssize_t numBytesRcvd = recv(sock, &messages, sizeof(uint32_t), 0);
+		/*ssize_t numBytesRcvd = recv(sock, &messages, sizeof(uint32_t), 0);
 		messages = ntohl(messages);
 		
 		if (numBytesRcvd < 0){
 			DieWithSystemMessage("recv() failed");	
 		}
+
 		uint32_t flag = (messages & MASK_SERV);
 		if(flag == READY || flag == PUSHB){
-			messages = ELE4205_OK;
+			messages = messages | ELE4205_OK;
 			size_t msgLen = sizeof(uint32_t); // Determine input length
 			uint32_t buffer = htonl(messages);
 			ssize_t numBytes = send(sock, &buffer, msgLen, 0);
@@ -98,7 +101,7 @@ int main(int argc, char *argv[]) {
 
 			esc_flag = 1;
 			destroyWindow("Stream");
-		}
+		}*/
 
 		bytes = 0;
 		sockData = new uchar[imgSize];

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I//include/opencv -I//include -I/export/tmp/4205_37/Projet/ele4205_projet_aut2021_37/debug_client/{OpenCV_INCLUDE_DIRS}
 
-CXX_FLAGS =  -O2 -pipe -g -feliminate-unused-debug-types  -O3 -DNDEBUG   -std=c++11
+CXX_FLAGS =  -O2 -pipe -g -feliminate-unused-debug-types  -g   -std=c++11
 

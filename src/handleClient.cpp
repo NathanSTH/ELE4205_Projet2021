@@ -70,3 +70,17 @@ void ChangeResClient(Mat &img, uint32_t messages, uint32_t &resX, uint32_t &resY
 		imgSize = img.total()*img.elemSize();
 	}
 }
+
+void sendMsg2Server(int sock, uint32_t messages, uint8_t &esc_flag){
+	size_t msgLen = sizeof(uint32_t); // Determine input length
+	uint32_t buffer = htonl(messages);
+	ssize_t numBytes = send(sock, &buffer, msgLen, 0);
+	if (numBytes < 0){
+		DieWithSystemMessage("send() failed");
+		esc_flag = 1;
+	}
+	else if (numBytes != msgLen) {
+		DieWithUserMessage("send()", "sent unexpected number of bytes");
+		esc_flag = 1;
+	}
+}
