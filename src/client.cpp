@@ -41,22 +41,23 @@ int main(int argc, char *argv[]) {
 		if(flag == READY || flag == PUSHB){
 			messages = ELE4205_OK;
 			
-		}else if(flag == IDOWN){
+		} else if(flag == IDOWN){
 			messages = ELE4205_QUIT;
 			esc_flag = 1;
 			destroyWindow("Stream");
 		}
 
 		int tmp = currentRes;
-		HandleWaitKey(30, messages, resX, resY, currentRes);
+		HandleWaitKey(30, messages, resX, resY, currentRes, esc_flag);
 
 		if (tmp != currentRes){
 			img = Mat::zeros(resY,resX,CV_8UC3);
 			imgSize = img.total()*img.elemSize();
 		}
-			
 		
 		sendMsg2Server(sock, messages, esc_flag);
+		
+
 		if (!esc_flag){
 			bytes = 0;
 
@@ -71,8 +72,9 @@ int main(int argc, char *argv[]) {
 
 			if ((messages & MASK_STATUS) == 0){
 				esc_flag = 1;
-				destroyWindow("Stream");
+				
 			}
+
 			Mat img(Size(resX, resY), CV_8UC3, sockData);
 			namedWindow("Stream",WINDOW_AUTOSIZE);
 			imshow("Stream", img);
@@ -88,6 +90,8 @@ int main(int argc, char *argv[]) {
 					_exit(EXIT_SUCCESS);
 				}
 			}	
+		} else {
+			destroyWindow("Stream");
 		}	
 			
 	}

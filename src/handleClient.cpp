@@ -2,13 +2,14 @@
 
 using namespace std;
 
-void HandleWaitKey(int waitTime, uint32_t &messages, uint32_t &resX, uint32_t &resY, uint32_t &currentRes){
+void HandleWaitKey(int waitTime, uint32_t &messages, uint32_t &resX, uint32_t &resY, uint32_t &currentRes, uint8_t &esc_flag){
 
 	int c = waitKey(waitTime) & 0xFF;
 	
 	switch (c){
 		case 27 :
 			messages = messages & ELE4205_QUIT;
+			esc_flag = 1;
 			break;
 		case 49:
 			messages = RES01 | ELE4205_OK;

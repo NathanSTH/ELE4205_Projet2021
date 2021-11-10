@@ -22,7 +22,7 @@
 	*@param waitTime Time to wait for a key entry (in ms).
 	*@param messages Variable that contains selected resolution and status.
 	**/
-void HandleWaitKey(int waitTime, uint32_t &messages,uint32_t &resX, uint32_t &resY, uint32_t &currentRes);
+void HandleWaitKey(int waitTime, uint32_t &messages,uint32_t &resX, uint32_t &resY, uint32_t &currentRes, uint8_t &esc_flag);
 /**
 	\brief This function displays the resolution options in the console.
 	**/
