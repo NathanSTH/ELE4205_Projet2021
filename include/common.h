@@ -13,6 +13,8 @@
 #include <iostream>
 #include <ostream>
 #include "cameraCapture.h"
+#include <string.h>
+
 //#include <opencv2/highgui/highgui.hpp>
 
 /**

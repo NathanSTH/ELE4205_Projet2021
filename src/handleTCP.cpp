@@ -11,16 +11,19 @@ void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera
 			messages = MASK_SERV & PUSHB;
 		else
 			messages = MASK_SERV & READY;
-	}else
+	} else
 		messages = MASK_SERV & IDOWN;
 	uint32_t buf = htonl(messages);
+
 	// Send status message to client
 	ssize_t numBytesSent = send(clntSocket, &buf, sizeof(uint32_t), 0);
 	if (numBytesSent < 0){
 		close (clntSocket); // Close client socket
 		DieWithSystemMessage("send() failed");			
 	}
-	// Receive message from client
+
+
+	// Receive message from client (OK,QUIT,RES)
 	ssize_t numBytesRcvd = recv(clntSocket, &messages, sizeof(uint32_t), 0);
 	messages = ntohl(messages);
 	
@@ -28,6 +31,7 @@ void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera
 		close (clntSocket); // Close client socket
 		DieWithSystemMessage("recv() failed");	
 	}
+
 	if((messages & MASK_STATUS) == ELE4205_OK){
 		if ((messages & MASK_RES) != currentRes){
       			UpdateRes(messages, cap, camera, frame);
@@ -39,6 +43,7 @@ void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera
 		frame = (frame.reshape(0,1)); // make the frame continuous
 		uint32_t frameSize = frame.total()*frame.elemSize();
 		ssize_t numBytesSent = send(clntSocket, frame.data, frameSize, 0);
+
 		if (numBytesSent < 0){
 			close (clntSocket); // Close client socket
 			DieWithSystemMessage("send() failed");			
@@ -46,6 +51,7 @@ void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera
 
 		else if (numBytesSent != frameSize)
 			DieWithUserMessage("send()", "sent unexpected number of bytes");
+
 	} else if ((messages & MASK_STATUS) == ELE4205_QUIT) {
 		close (clntSocket);
 		DieWithSystemMessage("Quit message received, closing socket."); // Close client socket

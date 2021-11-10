@@ -136,6 +136,7 @@ bool checkLight(void)
 	} else {
 		return false;
 	}
+	
 }
 
 bool initGPIO(void)

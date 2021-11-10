@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void HandleWaitKey(int waitTime, uint32_t &messages){
+void HandleWaitKey(int waitTime, uint32_t &messages, uint32_t &resX, uint32_t &resY, uint32_t &currentRes){
 
 	int c = waitKey(waitTime) & 0xFF;
 	
@@ -12,20 +12,33 @@ void HandleWaitKey(int waitTime, uint32_t &messages){
 			break;
 		case 49:
 			messages = RES01 | ELE4205_OK;
+			currentRes = RES01;
+			resX = resX_all[12]; //1280
+			resY = resY_all[12]; //960
 			break;
 		case 50:
 			messages = RES02 | ELE4205_OK;
+			currentRes = RES02;
+			resX = resX_all[6]; //800
+			resY = resY_all[6]; //600
 			break;
 		case 51 :
 			messages = RES03 | ELE4205_OK;
+			currentRes = RES03;
+			resX = resX_all[3]; //320
+			resY = resY_all[3]; //240
 			break;
 		case 52 :
 			messages = RES04 | ELE4205_OK;
+			currentRes = RES04;
+			resX = resX_all[0]; //176
+			resY = resY_all[0]; //144
 			break;
 		default :
-			messages =  messages | ELE4205_OK;
+			messages =  currentRes | messages;
 			break;
 	}
+
 }
 
 void PrintResOptions(void){
@@ -37,38 +50,6 @@ void PrintResOptions(void){
 	cout << "3. 320 x 240" << endl;
 	cout << "4. 176 x 144" << endl;
 	cout << endl;
-}
-
-void ChangeResClient(Mat &img, uint32_t messages, uint32_t &resX, uint32_t &resY, uint32_t &currentRes, int &imgSize){
-	if ((messages & MASK_RES) != currentRes){
-		switch (messages & MASK_RES){
-			case RES01 :
-				currentRes = RES01;
-				resX = resX_all[12]; //1280
-				resY = resY_all[12]; //960
-				break;
-			case RES02 :
-				currentRes = RES02;
-				resX = resX_all[6]; //800
-				resY = resY_all[6]; //600
-				break;
-			case RES03 :
-				currentRes = RES03;
-				resX = resX_all[3]; //320
-				resY = resY_all[3]; //240
-				break;
-			case RES04 :
-				currentRes = RES04;
-				resX = resX_all[0]; //176
-				resY = resY_all[0]; //144
-				break;
-			default :
-				break;
-		}
-		
-		img = Mat::zeros(resY,resX,CV_8UC3);
-		imgSize = img.total()*img.elemSize();
-	}
 }
 
 void sendMsg2Server(int sock, uint32_t messages, uint8_t &esc_flag){
@@ -83,4 +64,36 @@ void sendMsg2Server(int sock, uint32_t messages, uint8_t &esc_flag){
 		DieWithUserMessage("send()", "sent unexpected number of bytes");
 		esc_flag = 1;
 	}
+}
+
+void handleSocket(int argc, char *argv[], int &sock){
+	if (argc < 2 || argc > 3) // Test for correct number of arguments
+		DieWithUserMessage("Parameter(s)","<Server Address> <Echo Word> [<Server Port>]");
+
+	char *servIP = argv[1];     // First arg: server IP address (dotted quad)
+
+	// Third arg (optional): server port (numeric).  7 is well-known echo port
+	in_port_t servPort = (argc == 3) ? atoi(argv[2]) : 7;
+
+	// Create a reliable, stream socket using TCP
+	//int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	if (sock < 0)
+		DieWithSystemMessage("socket() failed");
+
+	// Construct the server address structure
+	struct sockaddr_in servAddr;            // Server address
+	memset(&servAddr, 0, sizeof(servAddr)); // Zero out structure
+	servAddr.sin_family = AF_INET;          // IPv4 address family
+
+	// Convert address
+	int rtnVal = inet_pton(AF_INET, servIP, &servAddr.sin_addr.s_addr);
+	if (rtnVal == 0)
+		DieWithUserMessage("inet_pton() failed", "invalid address string");
+	else if (rtnVal < 0)
+		DieWithSystemMessage("inet_pton() failed");
+	servAddr.sin_port = htons(servPort);    // Server port
+
+	// Establish the connection to the echo server
+	if (connect(sock, (struct sockaddr *) &servAddr, sizeof(servAddr)) < 0)
+		DieWithSystemMessage("connect() failed");
 }

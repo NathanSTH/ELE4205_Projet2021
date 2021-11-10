@@ -10,6 +10,10 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <ostream>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
 #include "common.h"
 
@@ -18,23 +22,14 @@
 	*@param waitTime Time to wait for a key entry (in ms).
 	*@param messages Variable that contains selected resolution and status.
 	**/
-void HandleWaitKey(int waitTime, uint32_t &messages);
+void HandleWaitKey(int waitTime, uint32_t &messages,uint32_t &resX, uint32_t &resY, uint32_t &currentRes);
 /**
 	\brief This function displays the resolution options in the console.
 	**/
 void PrintResOptions(void);
 
-/**
-	\brief This function handles the resolution change for the client.
-	*@param img Image to be updated.
-	*@param messages Variable that contains selected resolution and status.
-	*@param resX Image resolution width.
-	*@param resY Image resolution heigth.
-	*@param currentRes Current resolution.
-	*@param imgSize Size of the image in bytes.	
-	**/
-void ChangeResClient(Mat &img, uint32_t messages, uint32_t &resX, uint32_t &resY, uint32_t &currentRes, int &imgSize);
-
 void sendMsg2Server(int sock, uint32_t messages, uint8_t &esc_flag);
+
+void handleSocket(int argc, char *argv[], int &sock);
 
 #endif
