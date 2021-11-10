@@ -13,6 +13,7 @@
 #include <iostream>
 #include <ostream>
 #include "cameraCapture.h"
+//#include <opencv2/highgui/highgui.hpp>
 
 /**
    \var ELE4205_OK

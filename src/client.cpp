@@ -113,7 +113,7 @@ int main(int argc, char *argv[]) {
 			}
 		}	
 		Mat img(Size(resX, resY), CV_8UC3, sockData);
-		namedWindow("Stream",CV_WINDOW_AUTOSIZE);
+		namedWindow("Stream",WINDOW_AUTOSIZE);
 		imshow("Stream", img);	
 
 		HandleWaitKey(30, messages);
