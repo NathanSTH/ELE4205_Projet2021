@@ -5,12 +5,19 @@ using namespace std;
 uint32_t currentRes = RES01;
 
 void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera){
+	static bool button_pressed = 0;
 	uint32_t messages;
 	if(checkLight()){
-		if(checkGPIO())
-			messages = MASK_SERV & PUSHB;
-		else
+		bool chk = checkGPIO();
+		if(chk != button_pressed){
+			button_pressed = chk;
+			if (!button_pressed)
+				messages = MASK_SERV & PUSHB;
+			else
+				messages = MASK_SERV & READY;
+		} else
 			messages = MASK_SERV & READY;
+			
 	} else
 		messages = MASK_SERV & IDOWN;
 	uint32_t buf = htonl(messages);
