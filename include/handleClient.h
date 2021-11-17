@@ -2,19 +2,6 @@
 #define HANDLECLIENT_H
 
 #pragma once
-#include <stdio.h>
-#include <stdlib.h>
-#include <fstream>
-#include <netdb.h>
-#include <unistd.h>
-#include <opencv2/opencv.hpp>
-#include <iostream>
-#include <ostream>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-
 #include "common.h"
 
 /**
@@ -28,8 +15,14 @@ void HandleWaitKey(int waitTime, uint32_t &messages,uint32_t &resX, uint32_t &re
 	**/
 void PrintResOptions(void);
 
+/**
+	\brief This function sends messages flags from the client to the server.
+	**/
 void sendMsg2Server(int sock, uint32_t messages, uint8_t &esc_flag);
 
+/**
+	\brief This function initializes the communication with the server.
+	**/
 void handleSocket(int argc, char *argv[], int &sock);
 
 #endif

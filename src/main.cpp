@@ -1,19 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-
-#include <opencv2/opencv.hpp>
-#include <iostream>
-
-#include "../include/common.h"
 #include "../include/handleTCP.h"
-#include <netdb.h>
-#include <unistd.h>
-#include <fstream>
 #include <cstring>
 
 static const int MAXPENDING = 5; // Maximum outstanding connection requests

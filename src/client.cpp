@@ -1,7 +1,5 @@
 #include <tesseract/baseapi.h>
 #include <leptonica/allheaders.h>
-
-#include "../include/common.h"
 #include "../include/handleClient.h"
 
 using namespace cv;
@@ -99,7 +97,7 @@ int main(int argc, char *argv[]) {
 					tesseract::TessBaseAPI *ocr = new tesseract::TessBaseAPI();
 					ocr->Init(NULL, "eng");
 					ocr->SetPageSegMode(tesseract::PSM_AUTO);
-					ocr->SetVariable("tessedit_char_whitelist","A B C D E F G R a b c d e f g r 0 1 2 3 4 5 6 7 8 9 # ");
+					ocr->SetVariable("tessedit_char_whitelist","A B C D E F G R a b c 						d e f g r 0 1 2 3 4 5 6 7 8 9 # ");
 					ocr->SetImage(im.data, im.cols, im.rows, 3, im.step);
 
 					string outText = string(ocr->GetUTF8Text());

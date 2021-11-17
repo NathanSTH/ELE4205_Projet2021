@@ -76,10 +76,16 @@ int writeVideo(struct camera, int duration);
 	**/
 Mat captureImage(struct camera camera);
 
+/**	\brief This function uses the photosensor to verify that the illumination is above a specified threshold.
+	**/
 bool checkLight(void);
 
+/**	\brief This function initializes the GPIO pin on the Odroid with the needed specifications to use the push-button.
+	**/
 bool initGPIO(void);
 
+/**	\brief This function reads the state of the GPIO pin assigned to the push-button.
+	**/
 bool checkGPIO(void);
 
 #endif

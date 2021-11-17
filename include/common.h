@@ -2,6 +2,8 @@
 #define COMMON_H
 
 #pragma once
+#include <netinet/in.h>
+#include <arpa/inet.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <fstream>
@@ -9,11 +11,10 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <unistd.h>
-#include <opencv2/opencv.hpp>
-#include <iostream>
 #include <ostream>
-#include "cameraCapture.h"
 #include <string.h>
+#include "cameraCapture.h"
+
 
 //#include <opencv2/highgui/highgui.hpp>
 
@@ -77,7 +78,10 @@
    \brief Mask used to get the current resolution.
 **/
 #define MASK_RES 0b110
-
+/**
+   \var MASK_SERV
+   \brief Mask used to extract the message sent by the server from the messages variable.
+**/
 #define MASK_SERV 0b11000
 
 /**
