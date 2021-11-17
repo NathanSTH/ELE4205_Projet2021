@@ -1,3 +1,6 @@
+#include <tesseract/baseapi.h>
+#include <leptonica/allheaders.h>
+
 #include "../include/common.h"
 #include "../include/handleClient.h"
 
@@ -83,20 +86,36 @@ int main(int argc, char *argv[]) {
 				pid = fork();
 
 				if (pid == 0){
+					//Saving the image to a file "<imgXX>.png"
 					std::stringstream ss_i;
 					ss_i << i;
 					filename = (string("img") + ss_i.str() + string(".png")).c_str();
 					imwrite(filename, img);
+
+					//Using OpenCV to read the image
+					Mat im = cv::imread(filename, IMREAD_COLOR);
+
+					//Creation of the Tesseract object
+					tesseract::TessBaseAPI *ocr = new tesseract::TessBaseAPI();
+					ocr->Init(NULL, "eng");
+					ocr->SetPageSegMode(tesseract::PSM_AUTO);
+					ocr->SetVariable("tessedit_char_whitelist","A B C D E F G R a b c d e f g r 0 1 2 3 4 5 6 7 8 9 # ");
+					ocr->SetImage(im.data, im.cols, im.rows, 3, im.step);
+
+					string outText = string(ocr->GetUTF8Text());
+
+					cout << outText;
+
+					ocr->End();
+					//exiting
 					_exit(EXIT_SUCCESS);
 				}
 			}	
 		} else {
 			destroyWindow("Stream");
-		}	
-			
+		}
 	}
 	
-
   	fputc('\n', stdout); // Print a final linefeed
 
 	close(sock);
