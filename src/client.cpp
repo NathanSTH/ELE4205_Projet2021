@@ -21,8 +21,15 @@ int main(int argc, char *argv[]) {
 	uchar *sockData;
 	sockData = new uchar[imgSize];
 
-	int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	handleSocket(argc, argv, sock);
+	if (argc < 2 || argc > 3) // Test for correct number of arguments
+		DieWithUserMessage("Parameter(s)","<Server Address> [<Server Port>]");
+
+	char *servIP = argv[1];     // First arg: server IP address (dotted quad)
+
+	// Third arg (optional): server port (numeric).  7 is well-known echo port
+	in_port_t servPort = (argc == 3) ? atoi(argv[2]) : 7;
+
+	int sock = handleSocket(servIP, servPort);
 
 	PrintResOptions();
 
@@ -100,11 +107,37 @@ int main(int argc, char *argv[]) {
 					ocr->SetVariable("tessedit_char_whitelist","A B C D E F G R a b c 						d e f g r 0 1 2 3 4 5 6 7 8 9 # ");
 					ocr->SetImage(im.data, im.cols, im.rows, 3, im.step);
 
-					string outText = string(ocr->GetUTF8Text());
-
-					cout << outText;
+					char* outText = ocr->GetUTF8Text();
 
 					ocr->End();
+
+					outText = strcat(outText, "\0");
+					int sock2 = handleSocket(servIP, 4100);
+					uint32_t msgLen = htonl(strlen(outText));
+
+					ssize_t numBytesSent = send(sock2, &msgLen, sizeof(uint32_t), 0);
+
+					if (numBytesSent < 0){
+								DieWithSystemMessage("send() failed #1");
+					}
+
+					uint32_t buf;
+					ssize_t numByteRcvd = recv(sock2, &buf, sizeof(uint32_t), 0);
+					buf = ntohl(buf);
+					cout << "buf = " << buf << endl;
+
+					if (numBytesRcvd < 0){
+							DieWithSystemMessage("recv() failed");
+					}else if(buf != ELE4205_OK){
+						DieWithSystemMessage("server didn't receive the message");
+					}else{
+						cout << "~~~" << outText << "~~~" << endl;
+						numBytesSent = send(sock2, outText, ntohl(msgLen)+1, 0);
+						if (numBytesSent < 0){
+									DieWithSystemMessage("send() failed #2");
+						}
+					}
+
 					//exiting
 					_exit(EXIT_SUCCESS);
 				}

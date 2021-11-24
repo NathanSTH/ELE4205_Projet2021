@@ -67,14 +67,11 @@ void sendMsg2Server(int sock, uint32_t messages, uint8_t &esc_flag){
 	}
 }
 
-void handleSocket(int argc, char *argv[], int &sock){
-	if (argc < 2 || argc > 3) // Test for correct number of arguments
-		DieWithUserMessage("Parameter(s)","<Server Address> <Echo Word> [<Server Port>]");
+int handleSocket(char *servIP, in_port_t servPort){
+	int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
-	char *servIP = argv[1];     // First arg: server IP address (dotted quad)
 
-	// Third arg (optional): server port (numeric).  7 is well-known echo port
-	in_port_t servPort = (argc == 3) ? atoi(argv[2]) : 7;
+
 
 	// Create a reliable, stream socket using TCP
 	//int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -97,4 +94,5 @@ void handleSocket(int argc, char *argv[], int &sock){
 	// Establish the connection to the echo server
 	if (connect(sock, (struct sockaddr *) &servAddr, sizeof(servAddr)) < 0)
 		DieWithSystemMessage("connect() failed");
+	return sock;
 }

@@ -23,6 +23,6 @@ void sendMsg2Server(int sock, uint32_t messages, uint8_t &esc_flag);
 /**
 	\brief This function initializes the communication with the server.
 	**/
-void handleSocket(int argc, char *argv[], int &sock);
+int handleSocket(char *servIP, in_port_t servPort);
 
 #endif
