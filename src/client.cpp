@@ -1,5 +1,6 @@
 #include <tesseract/baseapi.h>
 #include <leptonica/allheaders.h>
+#include "opencv2/imgproc/imgproc.hpp"
 #include "../include/handleClient.h"
 
 using namespace cv;
@@ -9,6 +10,7 @@ uint8_t esc_flag = 0;
 ssize_t bytes = 0;
 uint32_t currentRes = RES01;
 static int i = 0;
+int const MAX_BINARY_VALUE = 255;
 
 int main(int argc, char *argv[]) {
 	string filename;
@@ -17,6 +19,9 @@ int main(int argc, char *argv[]) {
 	uint32_t resY = 960;
 	uint32_t messages = ELE4205_OK;
 	Mat img = Mat::zeros(resY,resX,CV_8UC3);
+	Mat img_gray, img_bin;
+	int threshold_value = 132;
+
 	int imgSize = img.total()*img.elemSize();
 	uchar *sockData;
 	sockData = new uchar[imgSize];
@@ -99,6 +104,19 @@ int main(int argc, char *argv[]) {
 
 					//Using OpenCV to read the image
 					Mat im = cv::imread(filename, IMREAD_COLOR);
+
+					// convert image to grayscale : might have to change to CV_BGR2GRAY
+					cvtColor(im, img_gray, COLOR_BGR2GRAY );
+					string filename2 = (string("img") + ss_i.str() + string ("_gray")+ string(".png")).c_str();
+					imwrite(filename2, img_gray);
+
+					// threshold image to black and white
+					threshold(img_gray, img_bin, threshold_value, MAX_BINARY_VALUE, THRESH_BINARY);
+					string filename3 = (string("img") + ss_i.str() + string ("_bin")+ string(".png")).c_str();
+					imwrite(filename3, img_bin);
+
+					//Using OpenCV to read the image
+					//Mat im_gray = cv::imread(filename, IMREAD_COLOR);
 
 					//Creation of the Tesseract object
 					tesseract::TessBaseAPI *ocr = new tesseract::TessBaseAPI();

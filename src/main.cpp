@@ -33,9 +33,8 @@ int main(int argc, char *argv[]) {
 
 	//Open the default video camera	
 	VideoCapture cap(0);
-        cap.set(CV_CAP_PROP_AUTOFOCUS, 1);
-	cap.set(CV_CAP_PROP_FRAME_WIDTH, camera.resX);
-	cap.set(CV_CAP_PROP_FRAME_HEIGHT, camera.resY);
+	cap.set(CAP_PROP_FRAME_WIDTH, camera.resX);
+	cap.set(CAP_PROP_FRAME_HEIGHT, camera.resY);
 
 	// if not success, exit program
 	if (cap.isOpened() == false)
