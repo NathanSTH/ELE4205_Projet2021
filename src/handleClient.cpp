@@ -70,9 +70,6 @@ void sendMsg2Server(int sock, uint32_t messages, uint8_t &esc_flag){
 int handleSocket(char *servIP, in_port_t servPort){
 	int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
-
-
-
 	// Create a reliable, stream socket using TCP
 	//int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if (sock < 0)

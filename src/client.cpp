@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 	uint32_t messages = ELE4205_OK;
 	Mat img = Mat::zeros(resY,resX,CV_8UC3);
 	Mat img_gray, img_bin;
-	int threshold_value = 132;
+	int threshold_value = 110;
 
 	int imgSize = img.total()*img.elemSize();
 	uchar *sockData;
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 	char *servIP = argv[1];     // First arg: server IP address (dotted quad)
 
 	// Third arg (optional): server port (numeric).  7 is well-known echo port
-	in_port_t servPort = (argc == 3) ? atoi(argv[2]) : 7;
+	in_port_t servPort = (argc == 3) ? atoi(argv[2])Ftt : 7;
 
 	int sock = handleSocket(servIP, servPort);
 
@@ -67,9 +67,7 @@ int main(int argc, char *argv[]) {
 			img = Mat::zeros(resY,resX,CV_8UC3);
 			imgSize = img.total()*img.elemSize();
 		}
-		
 		sendMsg2Server(sock, messages, esc_flag);
-		
 
 		if (!esc_flag){
 			bytes = 0;
@@ -116,13 +114,14 @@ int main(int argc, char *argv[]) {
 					imwrite(filename3, img_bin);
 
 					//Using OpenCV to read the image
-					//Mat im_gray = cv::imread(filename, IMREAD_COLOR);
+					//im = cv::imread(filename3, 0);
 
 					//Creation of the Tesseract object
 					tesseract::TessBaseAPI *ocr = new tesseract::TessBaseAPI();
-					ocr->Init(NULL, "eng");
+					ocr->Init(NULL, "eng", tesseract::OEM_TESSERACT_CUBE_COMBINED);
 					ocr->SetPageSegMode(tesseract::PSM_AUTO);
-					ocr->SetVariable("tessedit_char_whitelist","A B C D E F G R a b c 						d e f g r 0 1 2 3 4 5 6 7 8 9 # ");
+					ocr->SetVariable("tessedit_char_whitelist","ABCDEFGRabcdefgr0123456789#");
+					ocr->SetVariable("tessedit_char_blacklist","t");
 					ocr->SetImage(im.data, im.cols, im.rows, 3, im.step);
 
 					char* outText = ocr->GetUTF8Text();
@@ -138,7 +137,6 @@ int main(int argc, char *argv[]) {
 					if (numBytesSent < 0){
 								DieWithSystemMessage("send() failed #1");
 					}
-
 					uint32_t buf;
 					ssize_t numByteRcvd = recv(sock2, &buf, sizeof(uint32_t), 0);
 					buf = ntohl(buf);
@@ -149,13 +147,13 @@ int main(int argc, char *argv[]) {
 					}else if(buf != ELE4205_OK){
 						DieWithSystemMessage("server didn't receive the message");
 					}else{
+						//PROBLEME ICITE CALIISSS
 						cout << "~~~" << outText << "~~~" << endl;
 						numBytesSent = send(sock2, outText, ntohl(msgLen)+1, 0);
 						if (numBytesSent < 0){
 									DieWithSystemMessage("send() failed #2");
 						}
 					}
-
 					//exiting
 					_exit(EXIT_SUCCESS);
 				}
