@@ -6,18 +6,16 @@ using namespace std;
 Camera camera;
 /**
 \mainpage
-This project is in 2 parts. The first consists of a TCP server application that will be installed on an Odroid-OC2 and will use a Logitech C270 camera to transmit to a connected client. 
-The second part, the client application, will be installed on a computer and will allow the user to select a desired image resolution, stream images from the server camera and display them 
+This project consists of a TCP server application that will be installed on an Odroid-OC2 and will use a Logitech C270 camera to transmit to a connected client.
+Then, a client application will be installed on a computer and will allow the user to select a desired image resolution, stream images from the server camera and display them
 on the screen. The user can change resolution anytime during the stream by pressing "1", "2", "3" or "4" on the keyboard or "ESC" to quit the application and end the TCP communication.
+A photoresistor connected to the Odroid will allow light intensity detection and close the stream if the intensity is too low. A push-button connected to the Odroid will allow the user
+to save an image captured with the camera. Finally, the application uses Tesseract-OCR to recognizes characters on the captured image. The application will then
+parse the recognized text and play it as music.
 **/
-
-std::map<string, int> notes;
-
-void initMap(void);
 
 
 int main(int argc, char *argv[]) {
-	initMap();
 	//get_timing();
 	camera.resX = resX_all[12];
 	camera.resY = resY_all[12];
@@ -54,31 +52,6 @@ int main(int argc, char *argv[]) {
   // NOT REACHED
 }
 
-void initMap(void){
-	notes.insert(std::pair<string, int>("A", 440));
-	notes.insert(std::pair<string, int>("A#", 466));
-	notes.insert(std::pair<string, int>("B", 494));
-	notes.insert(std::pair<string, int>("C", 523));
-	notes.insert(std::pair<string, int>("C#", 554));
-	notes.insert(std::pair<string, int>("D", 587));
-	notes.insert(std::pair<string, int>("D#", 622));
-	notes.insert(std::pair<string, int>("E", 659));
-	notes.insert(std::pair<string, int>("F", 698));
-	notes.insert(std::pair<string, int>("F#", 734));
-	notes.insert(std::pair<string, int>("G", 784));
-	notes.insert(std::pair<string, int>("G#", 831));
-	notes.insert(std::pair<string, int>("a", 880));
-	notes.insert(std::pair<string, int>("a#", 932));
-	notes.insert(std::pair<string, int>("b", 988));
-	notes.insert(std::pair<string, int>("c", 1046));
-	notes.insert(std::pair<string, int>("c#", 1109));
-	notes.insert(std::pair<string, int>("d", 1175));
-	notes.insert(std::pair<string, int>("d#", 1245));
-	notes.insert(std::pair<string, int>("e", 1319));
-	notes.insert(std::pair<string, int>("f", 1397));
-	notes.insert(std::pair<string, int>("f#", 1480));
-	notes.insert(std::pair<string, int>("g", 1568));
-	notes.insert(std::pair<string, int>("g#", 1661));
-}
+
 
 

@@ -13,11 +13,7 @@
 #include <unistd.h>
 #include <ostream>
 #include <string.h>
-#include <map>
 #include "cameraCapture.h"
-
-
-//#include <opencv2/highgui/highgui.hpp>
 
 /**
    \var ELE4205_OK
@@ -90,32 +86,6 @@
    \brief Number of possible resolutions for the Logitech C270.
 **/
 #define nbRes 13
-
-/*std::map<char*, int> notes;
-notes.insert(pair<char*, int>('A', 440));
-notes.insert(pair<char*, int>('A#', 466));
-notes.insert(pair<char*, int>('B', 494));
-notes.insert(pair<char*, int>('C', 523));
-notes.insert(pair<char*, int>('C#', 554));
-notes.insert(pair<char*, int>('D', 587));
-notes.insert(pair<char*, int>('D#', 622));
-notes.insert(pair<char, int>('E', 659));
-notes.insert(pair<char, int>('F', 698));
-notes.insert(pair<char, int>('F#', 734));
-notes.insert(pair<char, int>('G', 784));
-notes.insert(pair<char, int>('G#', 831));
-notes.insert(pair<char, int>('a', 880));
-notes.insert(pair<char, int>('a#', 932));
-notes.insert(pair<char, int>('b', 988));
-notes.insert(pair<char, int>('c', 1046));
-notes.insert(pair<char, int>('c#', 1109));
-notes.insert(pair<char, int>('d', 1175));
-notes.insert(pair<char, int>('d#', 1245));
-notes.insert(pair<char, int>('e', 1319));
-notes.insert(pair<char, int>('f', 1397));
-notes.insert(pair<char, int>('f#', 1480));
-notes.insert(pair<char, int>('g', 1568));
-notes.insert(pair<char, int>('g#', 1661));*/
 
 /**
    \var resX_all

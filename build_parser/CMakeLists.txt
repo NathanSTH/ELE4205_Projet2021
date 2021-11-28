@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.4)
+add_definitions(-std=c++11)
+project(PWMSongParser)
+add_executable(PWMSongParser ../src/mainParser.cpp ../src/PWMSongParser.cpp ../src/handleTCP.cpp ../src/common.cpp ../src/cameraCapture.cpp)
+
+find_package(OpenCV REQUIRED)
+if(OpenCV_FOUND)
+	include_directories({OpenCV_INCLUDE_DIRS})
+	target_link_libraries(PWMSongParser ${OpenCV_LIBRARIES})
+else(OpenCV_FOUND)
+	message(FATAL ERROR "Librairie OpenCV introuvable!")
+endif(OpenCV_FOUND)

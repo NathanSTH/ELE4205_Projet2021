@@ -1,10 +1,11 @@
 #include "../include/handleTCP.h"
+#include "../include/PWMSongParser.h"
 
 using namespace std;
 
 uint32_t currentRes = RES01;
 
-int ConnectToClient(int argc, in_port_t servPort){
+int ConnectToClient(in_port_t servPort){
 
 	  // Create socket for incoming connections
 	  int servSock; // Socket descriptor for server
@@ -57,42 +58,16 @@ void HandleTCPClient(int clntSocket, Mat frame, VideoCapture cap, Camera &camera
 			if (!button_pressed){
 				messages = MASK_SERV & PUSHB;
 				pid = fork();
-					if (pid == 0){
-						int clntSock2 = ConnectToClient(2,4100);
-						uint32_t size;
-						char* msg_fork;
-
-						ssize_t numBytesRcvd = recv(clntSock2, &size, sizeof(uint32_t), 0);
-
-						size = ntohl(size);
-
-						cout << "size = " << size << endl;
-
-						if (numBytesRcvd < 0){
-							close (clntSocket); // Close client socket
-							DieWithSystemMessage("recv() failed");
-						}else{
-							uint32_t buf = htonl(ELE4205_OK);
-							send(clntSock2, &buf, sizeof(uint32_t), 0);
-						}
-
-						numBytesRcvd = recv(clntSock2, &msg_fork, size+1, 0);
-
-						if (numBytesRcvd < 0){
-							close (clntSocket); // Close client socket
-							DieWithSystemMessage("recv() failed");
-						}
-
-						cout << "I am here" << msg_fork << endl;
-
-						_exit(EXIT_SUCCESS);
-					}
+				if (pid == 0){
+					execl("./PWMSongParser",NULL);
+					_exit(EXIT_SUCCESS);
+				}
 			}
 			else
 				messages = MASK_SERV & READY;
 		} else
 			messages = MASK_SERV & READY;
-			
+
 	} else
 		messages = MASK_SERV & IDOWN;
 	uint32_t buf = htonl(messages);
@@ -146,25 +121,21 @@ void UpdateRes (uint32_t messages, VideoCapture &cap, Camera &camera, Mat &frame
 			currentRes = RES01;
 			camera.resX = resX_all[12]; //1280
 			camera.resY = resY_all[12]; //960
-			//camera.fps = fps_all[12];
 			break;
 		case RES02 :
 			currentRes = RES02;
 			camera.resX = resX_all[6]; //800
 			camera.resY = resY_all[6]; //600
-			//camera.fps = fps_all[6];
 			break;
 		case RES03 :
 			currentRes = RES03;
 			camera.resX = resX_all[3]; //320
 			camera.resY = resY_all[3]; //240
-			//camera.fps = fps_all[3];
 			break;
 		case RES04 :
 			currentRes = RES04;
 			camera.resX = resX_all[0]; //176
 			camera.resY = resY_all[0]; //144
-			//camera.fps = fps_all[0];
 			break;
 	}
 	cap.set(CV_CAP_PROP_FRAME_WIDTH, camera.resX);

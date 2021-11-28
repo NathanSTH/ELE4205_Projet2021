@@ -2,3 +2,8 @@
 /doc
 workspace/
 *.png
+./build_parser/*.o
+./build_parser/CMakeCache.*
+./build_parser/CMakeFiles
+./build_parser/cmake_*.*
+./build_parser/Makefile

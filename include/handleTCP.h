@@ -4,9 +4,17 @@
 #pragma once
 #include "common.h"
 
-static const int MAXPENDING = 5; // Maximum outstanding connection requests
+/**
+	\var MAXPENDING
+	\brief Maximum outstanding connection requests
+**/
+static const int MAXPENDING = 5;
 
-int ConnectToClient(int argc, in_port_t servPort);
+/**
+	\brief This function establishes the TCP connection with the client, on the server side.
+	*@param servPort Desired communication port number used for the connection.
+	**/
+int ConnectToClient(in_port_t servPort);
 /**
 	\brief This function handles the TCP connection with the client, on the server side.
 	*@param clntSocket Socket number assigned to the connection with the client.

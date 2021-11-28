@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 	uint32_t messages = ELE4205_OK;
 	Mat img = Mat::zeros(resY,resX,CV_8UC3);
 	Mat img_gray, img_bin;
-	int threshold_value = 110;
+	int threshold_value = 90;
 
 	int imgSize = img.total()*img.elemSize();
 	uchar *sockData;
@@ -32,11 +32,16 @@ int main(int argc, char *argv[]) {
 	char *servIP = argv[1];     // First arg: server IP address (dotted quad)
 
 	// Third arg (optional): server port (numeric).  7 is well-known echo port
-	in_port_t servPort = (argc == 3) ? atoi(argv[2])Ftt : 7;
+	in_port_t servPort = (argc == 3) ? atoi(argv[2]) : 7;
 
 	int sock = handleSocket(servIP, servPort);
 
 	PrintResOptions();
+
+	//Creation of the Tesseract object
+	tesseract::TessBaseAPI *ocr = new tesseract::TessBaseAPI();
+	ocr->Init(NULL, "eng", tesseract::OEM_TESSERACT_CUBE_COMBINED);
+	ocr->SetPageSegMode(tesseract::PSM_AUTO);
 
 	while(esc_flag == 0){
 		
@@ -101,34 +106,17 @@ int main(int argc, char *argv[]) {
 					imwrite(filename, img);
 
 					//Using OpenCV to read the image
-					Mat im = cv::imread(filename, IMREAD_COLOR);
+					//Mat im = cv::imread(filename, IMREAD_COLOR);
+					Mat im = cv::imread("Autumn_leaves-ocr.png", IMREAD_COLOR);
 
-					// convert image to grayscale : might have to change to CV_BGR2GRAY
-					cvtColor(im, img_gray, COLOR_BGR2GRAY );
-					string filename2 = (string("img") + ss_i.str() + string ("_gray")+ string(".png")).c_str();
-					imwrite(filename2, img_gray);
-
-					// threshold image to black and white
-					threshold(img_gray, img_bin, threshold_value, MAX_BINARY_VALUE, THRESH_BINARY);
-					string filename3 = (string("img") + ss_i.str() + string ("_bin")+ string(".png")).c_str();
-					imwrite(filename3, img_bin);
-
-					//Using OpenCV to read the image
-					//im = cv::imread(filename3, 0);
-
-					//Creation of the Tesseract object
-					tesseract::TessBaseAPI *ocr = new tesseract::TessBaseAPI();
-					ocr->Init(NULL, "eng", tesseract::OEM_TESSERACT_CUBE_COMBINED);
-					ocr->SetPageSegMode(tesseract::PSM_AUTO);
-					ocr->SetVariable("tessedit_char_whitelist","ABCDEFGRabcdefgr0123456789#");
-					ocr->SetVariable("tessedit_char_blacklist","t");
 					ocr->SetImage(im.data, im.cols, im.rows, 3, im.step);
+					ocr->SetVariable("tessedit_char_whitelist","ABCDEFGRabcdefg0123456789#");
+					ocr->SetVariable("tessedit_char_blacklist","t");
 
-					char* outText = ocr->GetUTF8Text();
+					char* outText = strcat(ocr->GetUTF8Text(),"\0");
 
 					ocr->End();
 
-					outText = strcat(outText, "\0");
 					int sock2 = handleSocket(servIP, 4100);
 					uint32_t msgLen = htonl(strlen(outText));
 
@@ -137,21 +125,21 @@ int main(int argc, char *argv[]) {
 					if (numBytesSent < 0){
 								DieWithSystemMessage("send() failed #1");
 					}
+
 					uint32_t buf;
 					ssize_t numByteRcvd = recv(sock2, &buf, sizeof(uint32_t), 0);
 					buf = ntohl(buf);
-					cout << "buf = " << buf << endl;
 
 					if (numBytesRcvd < 0){
-							DieWithSystemMessage("recv() failed");
+						DieWithSystemMessage("recv() failed");
 					}else if(buf != ELE4205_OK){
 						DieWithSystemMessage("server didn't receive the message");
 					}else{
-						//PROBLEME ICITE CALIISSS
-						cout << "~~~" << outText << "~~~" << endl;
-						numBytesSent = send(sock2, outText, ntohl(msgLen)+1, 0);
+						cout << "~~~" << endl << outText << endl;
+						numBytesSent = send(sock2, outText, ntohl(msgLen), 0);
+						cout << "~~~" << endl;
 						if (numBytesSent < 0){
-									DieWithSystemMessage("send() failed #2");
+							DieWithSystemMessage("send() failed #2");
 						}
 					}
 					//exiting
@@ -162,8 +150,8 @@ int main(int argc, char *argv[]) {
 			destroyWindow("Stream");
 		}
 	}
-	
-  	fputc('\n', stdout); // Print a final linefeed
+
+	fputc('\n', stdout); // Print a final linefeed
 
 	close(sock);
 	exit(0);

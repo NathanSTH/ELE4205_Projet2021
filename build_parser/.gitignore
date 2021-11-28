@@ -1,0 +1,9 @@
+*.o
+/doc
+workspace/
+*.png
+CMakeCache.*
+CMakeFiles
+cmake_*.*
+Makefile
+PWMSongParser

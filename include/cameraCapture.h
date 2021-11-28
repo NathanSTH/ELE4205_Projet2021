@@ -4,8 +4,6 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <time.h>
-
-// pour appels systeme
 #include <cstdio>
 #include <memory>
 #include <stdexcept>
