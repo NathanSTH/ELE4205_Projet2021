@@ -7,3 +7,4 @@ workspace/
 ./build_parser/CMakeFiles
 ./build_parser/cmake_*.*
 ./build_parser/Makefile
+.project
