@@ -19,8 +19,7 @@ int main(int argc, char *argv[]) {
 	uint32_t resY = 960;
 	uint32_t messages = ELE4205_OK;
 	Mat img = Mat::zeros(resY,resX,CV_8UC3);
-	Mat img_gray, img_bin;
-	int threshold_value = 90;
+	Mat img_gray, img_bin, img_blur;
 
 	int imgSize = img.total()*img.elemSize();
 	uchar *sockData;
@@ -42,6 +41,8 @@ int main(int argc, char *argv[]) {
 	tesseract::TessBaseAPI *ocr = new tesseract::TessBaseAPI();
 	ocr->Init(NULL, "eng", tesseract::OEM_TESSERACT_CUBE_COMBINED);
 	ocr->SetPageSegMode(tesseract::PSM_AUTO);
+	ocr->SetVariable("tessedit_char_whitelist","ABCDEFGRabcdefg0123456789#");
+	ocr->SetVariable("tessedit_char_blacklist","it()!?j");
 
 	while(esc_flag == 0){
 		
@@ -106,12 +107,13 @@ int main(int argc, char *argv[]) {
 					imwrite(filename, img);
 
 					//Using OpenCV to read the image
-					//Mat im = cv::imread(filename, IMREAD_COLOR);
-					Mat im = cv::imread("Autumn_leaves-ocr.png", IMREAD_COLOR);
-
-					ocr->SetImage(im.data, im.cols, im.rows, 3, im.step);
-					ocr->SetVariable("tessedit_char_whitelist","ABCDEFGRabcdefg0123456789#");
-					ocr->SetVariable("tessedit_char_blacklist","t");
+					Mat im = cv::imread(filename, IMREAD_COLOR);
+					//Mat im = cv::imread("Autumn_leaves-ocr.png", IMREAD_COLOR);
+					cvtColor(im, img_gray, COLOR_BGR2GRAY );
+					medianBlur(img_gray, img_blur, 5);
+					adaptiveThreshold(img_blur, img_bin, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY, 11, 3);
+					imwrite("test.png", img_bin);
+					ocr->SetImage(img_bin.data, img_bin.cols, img_bin.rows, 1, img_bin.step);
 
 					char* outText = strcat(ocr->GetUTF8Text(),"\0");
 

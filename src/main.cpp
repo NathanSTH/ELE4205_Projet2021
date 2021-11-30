@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
     DieWithUserMessage("Parameter(s)", "<Server Port>");
 
   in_port_t servPort = atoi(argv[1]); // First arg:  local port
-  int clntSock = ConnectToClient(argc, servPort);
+  int clntSock = ConnectToClient(servPort);
 
   Mat frame = Mat::zeros(camera.resY,camera.resX,CV_8UC3);
 
