@@ -1,7 +1,11 @@
-# ELE4205 projet A2021 Ã‰quipe 37
+# ELE4205 projet A2021 Équipe 37
 ## Text recognition algorithm based on OpenCV and Tesseract OCR
 
 [![Build Status](https://bitbucket.org/rgourdeau/ele4205_projet_aut2021_37/src/master/README.md)](https://bitbucket.org/rgourdeau/ele4205_projet_aut2021_37)
+
+Authors: 
+- Charland Gagné, Gabriel
+- Saint-Hilaire, Nathan
 
 This program consist of a TCP-IP communication between the computer (client) and a ODROID-C2 module (server). Once the connexion is established, a camera on the server side send a video stream to the client
 
@@ -13,8 +17,21 @@ This program consist of a TCP-IP communication between the computer (client) and
 
 ## Features
 
-- Computer vison (OpenCV)
+- Computer vison (OpenCV 2.4.5)
 - Deep learning Optical Character Recognition (OCR) based on Tesseract OCR 3.0
 - ODROID C-2
 - TCP-IP communication
 
+## How to use
+- 
+
+
+## References
+
+[OpenCV Tutorial C++](https://www.opencv-srf.com/p/opencv-lessons.html)
+[Beaglebone: Video Capture and Image Processing on Embedded Linux using OpenCV](http://derekmolloy.ie/beaglebone/beaglebone-video-capture-and-image-processing-on-embedded-linux-using-opencv/)
+[Streaming Video using RTP on the Beaglebone black](http://derekmolloy.ie/streaming-video-using-rtp-on-the-beaglebone-black/)
+[Beaglebone Images, Video and OpenCV](http://derekmolloy.ie/beaglebone-images-video-and-opencv/)
+[Video for Linux Two API Specification](https://www.linuxtv.org/downloads/legacy/video4linux/API/V4L2_API/spec-single/v4l2.html)
+[TCP/IP Sockets in C (Second Edition) disponible en-ligne à Polytechnique](www.sciencedirect.com/science/book/9780123745408)
+[C++ OpenCV image sending through socket](https://stackoverflow.com/questions/20314524/c-opencv-image-sending-through-socket)
