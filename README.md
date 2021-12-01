@@ -3,12 +3,12 @@
 
 [![Build Status](https://bitbucket.org/rgourdeau/ele4205_projet_aut2021_37/src/master/README.md)](https://bitbucket.org/rgourdeau/ele4205_projet_aut2021_37)
 
-## Authors: 
+## Authors
 - Charland Gagné, Gabriel
 - Saint-Hilaire, Nathan
 
 ## Description
-This program consist of a TCP-IP communication between the computer (client) and a ODROID-C2 module (server). Once the connexion is established, a camera on the server side send a video stream to the client. 
+This program consist of a TCP-IP communication between the computer (client) and a ODROID-C2 module (server). Once the connexion is established, a camera on the server side send a video stream to the client. This program was made as part of the ELE4205 undergraduate course given at Polytechnique Montreal. 
 
 - The client can change resolution at anytime using the keyboard
 - A photo-resistor is read through ADC on the server and stop the stream if the luminosity is too low
@@ -44,3 +44,4 @@ This program consist of a TCP-IP communication between the computer (client) and
 [C++ OpenCV image sending through socket](https://stackoverflow.com/questions/20314524/c-opencv-image-sending-through-socket)
 
 [Adaptative Thresholding with OpenCV](https://www.pyimagesearch.com/2021/05/12/adaptive-thresholding-with-opencv-cv2-adaptivethreshold/)
+
