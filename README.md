@@ -24,7 +24,65 @@ This program consist of a TCP-IP communication between the computer (client) and
 - TCP-IP communication
 
 ## How to use
-- 
+-Clone the repository.
+
+### Build server application
+
+-Install and source the SDK : "environment-setup-aarch64-poky-linux".
+
+-In the ele_projet_aut2021_37/debug_oc2 folder :
+
+	$ cmake -DCMAKE_BUILD_TYPE=Release ./
+
+	$ make
+
+-Upload executable to the Odroid :
+
+	$ scp /<path_to_project>/ele4205_projet_aut2021_37/debug_oc2/capture root@<odroid_ip_address>:/home/root/
+
+### Build song parser application
+
+-Install and source the SDK : "environment-setup-aarch64-poky-linux".
+
+-In the ele_projet_aut2021_37/build_parser folder :
+
+	$ cmake -DCMAKE_BUILD_TYPE=Release ./
+
+	$ make
+
+-Upload executable to the Odroid :
+
+	$ scp /<path_to_project>/ele4205_projet_aut2021_37/build_parser/PWMSongParser root@<odroid_ip_address>:/home/root/
+
+### Build client application
+
+-Create a new folder outside the ele4205_projet_aut2021_37 folder, for example, "build_client".
+
+-In the build_client folder:
+
+	$ cmake -DCMAKE_BUILD_TYPE=Release ../ele4205_aut2021_37/
+
+	$ make
+
+### Run server application
+
+-In the root directory of the Odroid:
+
+	# ./capture 4099
+
+### Run client application
+
+-In the build_client application:
+
+	$ ./client <odroid_ip_address> 4099
+
+### Choose resolution
+
+-Press the keyboard key corresponding to the desired resolution.
+
+### Capture and read image
+
+-Press the push-button on the Odroid circuit to capture and read an image.
 
 
 ## References
