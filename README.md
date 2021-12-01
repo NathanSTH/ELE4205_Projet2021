@@ -1,5 +1,5 @@
 # ELE4205 projet A2021 Équipe 37
-## Text recognition algorithm based on OpenCV and Tesseract OCR
+## Text recognition algorithm based on OpenCV and Tesseract OCR and song player
 
 [![Build Status](https://bitbucket.org/rgourdeau/ele4205_projet_aut2021_37/src/master/README.md)](https://bitbucket.org/rgourdeau/ele4205_projet_aut2021_37)
 
