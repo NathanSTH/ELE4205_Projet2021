@@ -1,10 +1,10 @@
-# ELE4205 projet A2021 Équipe 37
+# ELE4205 projet A2021
 ## Text recognition algorithm based on OpenCV and Tesseract OCR and song player
 
 [![Build Status](https://bitbucket.org/rgourdeau/ele4205_projet_aut2021_37/src/master/README.md)](https://bitbucket.org/rgourdeau/ele4205_projet_aut2021_37)
 
 ## Authors
-- Charland Gagné, Gabriel
+- Charland GagnÃ©, Gabriel
 - Saint-Hilaire, Nathan
 
 ## Description
@@ -97,7 +97,7 @@ This program consist of a TCP-IP communication between the computer (client) and
 
 [Video for Linux Two API Specification](https://www.linuxtv.org/downloads/legacy/video4linux/API/V4L2_API/spec-single/v4l2.html)
 
-[TCP/IP Sockets in C (Second Edition) disponible en-ligne à Polytechnique](www.sciencedirect.com/science/book/9780123745408)
+[TCP/IP Sockets in C (Second Edition) disponible en-ligne Ã  Polytechnique](www.sciencedirect.com/science/book/9780123745408)
 
 [C++ OpenCV image sending through socket](https://stackoverflow.com/questions/20314524/c-opencv-image-sending-through-socket)
 
